@@ -55,6 +55,7 @@
     "tsdown": "catalog:",
     "rimraf": "catalog:",
     "vite": "catalog:",
+    "vite-plugin-dts": "^4.5.0",
     "vue": "catalog:frontend",
     "vue-router": "catalog:frontend",
     "vue-tsc": "catalog:frontend"
