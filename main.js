@@ -44,10 +44,10 @@ async function startN8n() {
     const isDev = !app.isPackaged;
     
     if (isDev) {
-      n8nPath = path.resolve(__dirname, '../packages/cli/bin/n8n');
+      n8nPath = path.resolve(__dirname, 'server/packages/cli/bin/n8n');
     } else {
-      // In production, we use the bundled backend in resources/flexai-backend
-      n8nPath = path.join(process.resourcesPath, 'flexai-backend/packages/cli/bin/n8n');
+      // In production, we use the bundled backend in resources/server
+      n8nPath = path.join(process.resourcesPath, 'server/packages/cli/bin/n8n');
     }
 
     if (!fs.existsSync(n8nPath)) {

@@ -1,0 +1,5 @@
+
+
+> @n8n/ai-workflow-builder@0.32.0 build /root/project-flexai/flexai/packages/@n8n/ai-workflow-builder.ee
+> tsc -p ./tsconfig.build.json && tsc-alias -p tsconfig.build.json
+

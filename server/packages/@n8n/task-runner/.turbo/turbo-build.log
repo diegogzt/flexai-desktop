@@ -1,0 +1,5 @@
+
+
+> @n8n/task-runner@1.58.0 build /root/project-flexai/flexai/packages/@n8n/task-runner
+> tsc -p ./tsconfig.build.json && tsc-alias -p tsconfig.build.json
+

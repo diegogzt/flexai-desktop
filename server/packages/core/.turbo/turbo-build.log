@@ -1,0 +1,5 @@
+
+
+> n8n-core@1.121.0 build /root/project-flexai/flexai/packages/core
+> tsc -p tsconfig.build.json && tsc-alias -p tsconfig.build.json
+

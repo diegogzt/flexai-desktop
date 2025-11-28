@@ -1,0 +1,4 @@
+
+> @n8n/design-system@1.109.0 lint:styles:fix /root/project-flexai/flexai/packages/frontend/@n8n/design-system
+> stylelint "src/**/*.{scss,sass,vue}" --fix --cache
+

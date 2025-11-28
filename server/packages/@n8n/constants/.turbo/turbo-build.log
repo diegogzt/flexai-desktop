@@ -1,0 +1,5 @@
+
+
+> @n8n/constants@0.14.0 build /root/project-flexai/flexai/packages/@n8n/constants
+> tsc -p tsconfig.build.json
+

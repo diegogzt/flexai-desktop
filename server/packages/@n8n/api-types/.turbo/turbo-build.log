@@ -1,0 +1,5 @@
+
+
+> @n8n/api-types@0.56.0 build /root/project-flexai/flexai/packages/@n8n/api-types
+> tsc -p tsconfig.build.json
+

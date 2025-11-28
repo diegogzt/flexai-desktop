@@ -1,0 +1,5 @@
+
+
+> @n8n/decorators@0.32.0 build /root/project-flexai/flexai/packages/@n8n/decorators
+> tsc -p tsconfig.build.json
+

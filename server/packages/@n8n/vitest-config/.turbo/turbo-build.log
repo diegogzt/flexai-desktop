@@ -1,0 +1,5 @@
+
+
+> @n8n/vitest-config@1.5.0 build /root/project-flexai/flexai/packages/@n8n/vitest-config
+> tsc -p tsconfig.build.json
+

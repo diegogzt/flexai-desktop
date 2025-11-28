@@ -1,0 +1,5 @@
+
+
+> @n8n/eslint-plugin-community-nodes@0.7.0 build /root/project-flexai/flexai/packages/@n8n/eslint-plugin-community-nodes
+> tsc --project tsconfig.build.json
+

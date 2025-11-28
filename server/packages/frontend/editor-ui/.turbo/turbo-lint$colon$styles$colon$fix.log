@@ -1,0 +1,4 @@
+
+> n8n-editor-ui@1.122.0 lint:styles:fix /root/project-flexai/flexai/packages/frontend/editor-ui
+> stylelint "src/**/*.{scss,sass,vue}" --fix --cache
+

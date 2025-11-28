@@ -1,0 +1,5 @@
+
+
+> @n8n/db@0.33.0 build /root/project-flexai/flexai/packages/@n8n/db
+> tsc -p tsconfig.build.json
+

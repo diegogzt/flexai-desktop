@@ -1,0 +1,29 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AddToolsColumnToChatHubTables1761830340990 = void 0;
+const table = {
+    sessions: 'chat_hub_sessions',
+    agents: 'chat_hub_agents',
+};
+class AddToolsColumnToChatHubTables1761830340990 {
+    async up({ schemaBuilder: { addColumns, column }, queryRunner, tablePrefix }) {
+        await addColumns(table.sessions, [
+            column('tools').json.notNull.comment('Tools available to the agent as JSON node definitions'),
+        ]);
+        await addColumns(table.agents, [
+            column('tools').json.notNull.comment('Tools available to the agent as JSON node definitions'),
+        ]);
+        await Promise.all([
+            `UPDATE \`${tablePrefix}${table.sessions}\` SET \`tools\` = '[]' WHERE JSON_TYPE(\`tools\`) = 'NULL'`,
+            `UPDATE \`${tablePrefix}${table.agents}\` SET \`tools\` = '[]' WHERE JSON_TYPE(\`tools\`) = 'NULL'`,
+        ].map(async (query) => {
+            await queryRunner.query(query);
+        }));
+    }
+    async down({ schemaBuilder: { dropColumns } }) {
+        await dropColumns(table.sessions, ['tools']);
+        await dropColumns(table.agents, ['tools']);
+    }
+}
+exports.AddToolsColumnToChatHubTables1761830340990 = AddToolsColumnToChatHubTables1761830340990;
+//# sourceMappingURL=1761830340990-AddToolsColumnToChatHubTables.js.map

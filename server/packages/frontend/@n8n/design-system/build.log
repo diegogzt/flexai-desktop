@@ -1,0 +1,21 @@
+
+> @n8n/design-system@1.109.0 build /root/project-flexai/flexai/packages/frontend/@n8n/design-system
+> vite build
+
+rolldown-vite v7.1.16 building for production...
+[2Ktransforming...Browserslist: browsers data (caniuse-lite) is 6 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[32m✓[39m 2728 modules transformed.
+rendering chunks...
+computing gzip size...
+[2mdist/[22m[35mdesign-system.css        [39m[1m[2m  117.92 kB[22m[22m[2m │ gzip:  18.74 kB[22m
+[2mdist/[22m[36men-BqjV0Zi0.js           [39m[1m[2m    0.08 kB[22m[22m[2m │ gzip:   0.08 kB[22m
+[2mdist/[22m[36men-Dj21Qf2x.js           [39m[1m[2m    4.83 kB[22m[22m[2m │ gzip:   1.74 kB[22m
+[2mdist/[22m[36mn8n-design-system.es.js  [39m[1m[33m1,847.30 kB[39m[22m[2m │ gzip: 457.11 kB[22m
+[2Ktransforming...[32m✓[39m 2728 modules transformed.
+rendering chunks...
+computing gzip size...
+[2mdist/[22m[35mdesign-system.css         [39m[1m[2m  117.92 kB[22m[22m[2m │ gzip:  18.74 kB[22m
+[2mdist/[22m[36mn8n-design-system.umd.js  [39m[1m[33m1,379.50 kB[39m[22m[2m │ gzip: 398.62 kB[22m
+✓ built in 12.30s

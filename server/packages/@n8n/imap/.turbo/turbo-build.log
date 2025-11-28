@@ -1,0 +1,5 @@
+
+
+> @n8n/imap@0.16.0 build /root/project-flexai/flexai/packages/@n8n/imap
+> tsc -p tsconfig.build.json
+

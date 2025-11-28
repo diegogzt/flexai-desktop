@@ -1,0 +1,5 @@
+
+
+> @n8n/client-oauth2@0.32.0 build /root/project-flexai/flexai/packages/@n8n/client-oauth2
+> tsc -p tsconfig.build.json
+

@@ -1,38 +1,31 @@
 # FlexAI Desktop
 
-This is a standalone desktop launcher for FlexAI. It allows you to run the full FlexAI platform locally without needing Docker or manual configuration.
+This repository contains the complete FlexAI platform wrapped in a desktop launcher. It allows users to run FlexAI locally without Docker or complex setup.
 
-## How it works
+## Structure
 
-1.  It finds the FlexAI executable (bundled or in the monorepo).
-2.  It automatically configures the environment (Database, Port, Encryption Keys).
-3.  It launches the FlexAI server in the background.
-4.  It opens the FlexAI interface in the application window.
+- `server/`: Contains the full source code of FlexAI (backend & frontend).
+- `main.js`: The Electron entry point that launches the server and opens the UI.
 
 ## Development
 
-To run this launcher against your local FlexAI source code:
-
-1.  Ensure you have built the main project:
-    ```bash
-    cd ../
-    pnpm build
-    ```
-2.  Install dependencies here:
+1.  Install dependencies (this will also install and build the inner FlexAI server):
     ```bash
     npm install
     ```
-3.  Start the desktop app:
+    *Note: This may take a while as it builds the entire platform.*
+
+2.  Start the desktop app:
     ```bash
     npm start
     ```
 
 ## Building for Distribution
 
-To create a standalone installer that includes the FlexAI code:
+To create a standalone installer:
 
-1.  You must configure the build process to copy the `packages/cli` and `packages/editor-ui` build artifacts into the Electron resources.
-2.  Run:
-    ```bash
-    npm run dist
-    ```
+```bash
+npm run dist
+```
+
+The installer will include the compiled FlexAI server, so the end user does not need Node.js or Docker installed.

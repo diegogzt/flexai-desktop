@@ -1,0 +1,726 @@
+
+> n8n-editor-ui@1.122.0 build /root/project-flexai/flexai/packages/frontend/editor-ui
+> cross-env VUE_APP_PUBLIC_PATH="/{{BASE_PATH}}/" NODE_OPTIONS="--max-old-space-size=3072" vite build
+
+You or a plugin you are using have set `optimizeDeps.esbuildOptions` but this option is now deprecated. Vite now uses Rolldown to optimize the dependencies. Please use `optimizeDeps.rollupOptions` instead.
+plugin-legacy overrode 'build.target'. You should pass 'targets' as an option to this plugin with the list of legacy browsers to support instead.
+plugin-legacy 'modernTargets' option overrode the builtin targets of modern chunks. Some versions of browsers between legacy and modern may not be supported.
+rolldown-vite v7.1.16 building for production...
+<script src="/{{BASE_PATH}}/static/base-path.js"> in "/index.html" can't be bundled without type="module" attribute
+<script src="/{{BASE_PATH}}/static/posthog.init.js"> in "/index.html" can't be bundled without type="module" attribute
+
+/{{BASE_PATH}}/static/prefers-color-scheme.css doesn't exist at build time, it will remain unchanged to be resolved at runtime
+[2Ktransforming...Browserslist: browsers data (caniuse-lite) is 6 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[plugin rolldown:vite-resolve] Module "os" has been externalized for browser compatibility, imported by "/root/project-flexai/flexai/node_modules/.pnpm/recast@0.22.0/node_modules/recast/lib/util.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[32m✓[39m 6592 modules transformed.
+rendering chunks...
+[plugin builtin:reporter] 
+(!) /root/project-flexai/flexai/packages/frontend/editor-ui/src/features/ndv/parameters/components/CollectionParameter.vue is dynamically imported by /root/project-flexai/flexai/packages/frontend/editor-ui/src/features/ndv/parameters/components/ParameterInputList.vue?vue&type=script&setup=true&lang.ts but also statically imported by /root/project-flexai/flexai/packages/frontend/editor-ui/src/features/ndv/parameters/components/MultipleParameter.vue?vue&type=script&setup=true&lang.ts, dynamic import will not move module into another chunk.
+
+[vite-plugin-static-copy] Copied 2 items.
+computing gzip size...
+[2mdist/[22m[2massets/[22m[32mpolyfills-legacy-BI_UWwJQ.js                                   [39m[1m[2m  187.82 kB[22m[22m
+[2mdist/[22m[2massets/[22m[36men-legacy-0SwyXYDA.js                                          [39m[1m[2m    0.33 kB[22m[22m[2m │ gzip:   0.21 kB[22m
+[2mdist/[22m[2massets/[22m[36m_plugin-vue_export-helper-legacy-DZMI5HPp.js                   [39m[1m[2m    0.49 kB[22m[22m[2m │ gzip:   0.28 kB[22m
+[2mdist/[22m[2massets/[22m[36msourceControl.eventBus-legacy-KW_K6xgL.js                      [39m[1m[2m    0.50 kB[22m[22m[2m │ gzip:   0.28 kB[22m
+[2mdist/[22m[2massets/[22m[36msmartDecimal-legacy-DBGZXJnQ.js                                [39m[1m[2m    0.53 kB[22m[22m[2m │ gzip:   0.30 kB[22m
+[2mdist/[22m[2massets/[22m[36mmcp.constants-legacy-BkbTHrFy.js                               [39m[1m[2m    0.58 kB[22m[22m[2m │ gzip:   0.35 kB[22m
+[2mdist/[22m[2massets/[22m[36msortByProperty-legacy-Cr1t4fIx.js                              [39m[1m[2m    0.59 kB[22m[22m[2m │ gzip:   0.33 kB[22m
+[2mdist/[22m[2massets/[22m[36mcore-legacy-CovukW6E.js                                        [39m[1m[2m    0.68 kB[22m[22m[2m │ gzip:   0.36 kB[22m
+[2mdist/[22m[2massets/[22m[36mauth.eventBus-legacy-BEUAM5hd.js                               [39m[1m[2m    0.73 kB[22m[22m[2m │ gzip:   0.36 kB[22m
+[2mdist/[22m[2massets/[22m[36mRunDataHtml-legacy-BwgMF-FM.js                                 [39m[1m[2m    0.80 kB[22m[22m[2m │ gzip:   0.39 kB[22m
+[2mdist/[22m[2massets/[22m[36mfileUtils-legacy-BbiGYBne.js                                   [39m[1m[2m    0.95 kB[22m[22m[2m │ gzip:   0.47 kB[22m
+[2mdist/[22m[2massets/[22m[36museStyles-legacy-E8NPEyeD.js                                   [39m[1m[2m    1.39 kB[22m[22m[2m │ gzip:   0.65 kB[22m
+[2mdist/[22m[2massets/[22m[36museExecutionData-legacy-D9337Pkj.js                            [39m[1m[2m    1.47 kB[22m[22m[2m │ gzip:   0.58 kB[22m
+[2mdist/[22m[2massets/[22m[36mretry-legacy-CTwsGM7o.js                                       [39m[1m[2m    1.78 kB[22m[22m[2m │ gzip:   0.74 kB[22m
+[2mdist/[22m[2massets/[22m[36mconstants-legacy-DjFSod4r.js                                   [39m[1m[2m    1.88 kB[22m[22m[2m │ gzip:   0.73 kB[22m
+[2mdist/[22m[2massets/[22m[36museExternalHooks-legacy-bC6MiPv1.js                            [39m[1m[2m    1.88 kB[22m[22m[2m │ gzip:   0.66 kB[22m
+[2mdist/[22m[2massets/[22m[36museIntersectionObserver-legacy-DhQuUrIr.js                     [39m[1m[2m    1.89 kB[22m[22m[2m │ gzip:   0.72 kB[22m
+[2mdist/[22m[2massets/[22m[36mVueMarkdown-legacy-BItWvCfu.js                                 [39m[1m[2m    1.90 kB[22m[22m[2m │ gzip:   0.73 kB[22m
+[2mdist/[22m[2massets/[22m[36mEnterpriseEdition.ee-legacy-B3mav9Ly.js                        [39m[1m[2m    2.05 kB[22m[22m[2m │ gzip:   0.73 kB[22m
+[2mdist/[22m[2massets/[22m[36museMcp-legacy-BfOOoXKY.js                                      [39m[1m[2m    2.11 kB[22m[22m[2m │ gzip:   0.78 kB[22m
+[2mdist/[22m[2massets/[22m[36muniqBy-legacy-D3-UGjfj.js                                      [39m[1m[2m    2.18 kB[22m[22m[2m │ gzip:   0.87 kB[22m
+[2mdist/[22m[2massets/[22m[36muserRoleProvisioning.store-legacy-0nSVE0iN.js                  [39m[1m[2m    2.32 kB[22m[22m[2m │ gzip:   0.70 kB[22m
+[2mdist/[22m[2massets/[22m[36mRunDataParsedAiContent-legacy-CHCeP49W.js                      [39m[1m[2m    2.37 kB[22m[22m[2m │ gzip:   0.86 kB[22m
+[2mdist/[22m[2massets/[22m[36museChatHubSidebarState-legacy-DdL4HJHY.js                      [39m[1m[2m    2.46 kB[22m[22m[2m │ gzip:   0.88 kB[22m
+[2mdist/[22m[2massets/[22m[36museBeforeUnload-legacy-BxHFczA9.js                             [39m[1m[2m    2.46 kB[22m[22m[2m │ gzip:   0.93 kB[22m
+[2mdist/[22m[2massets/[22m[36mpickBy-legacy-CSSkaZsY.js                                      [39m[1m[2m    2.47 kB[22m[22m[2m │ gzip:   0.87 kB[22m
+[2mdist/[22m[2massets/[22m[36museClipboard-legacy-BCdfloxj.js                                [39m[1m[2m    2.66 kB[22m[22m[2m │ gzip:   0.95 kB[22m
+[2mdist/[22m[2massets/[22m[36mchunk-legacy-Re9CbdfL.js                                       [39m[1m[2m    2.67 kB[22m[22m[2m │ gzip:   1.00 kB[22m
+[2mdist/[22m[2massets/[22m[36mdateFormatter-legacy-23I8kO22.js                               [39m[1m[2m    2.74 kB[22m[22m[2m │ gzip:   0.88 kB[22m
+[2mdist/[22m[2massets/[22m[36minsights.constants-legacy-CQF1GF20.js                          [39m[1m[2m    2.83 kB[22m[22m[2m │ gzip:   0.91 kB[22m
+[2mdist/[22m[2massets/[22m[36morderBy-legacy-B2y7Irf9.js                                     [39m[1m[2m    2.95 kB[22m[22m[2m │ gzip:   1.06 kB[22m
+[2mdist/[22m[2massets/[22m[36mpreload-helper-legacy-CXRjoQ0T.js                              [39m[1m[2m    3.00 kB[22m[22m[2m │ gzip:   1.14 kB[22m
+[2mdist/[22m[2massets/[22m[36mSignoutView-legacy-D-h8Vlh8.js                                 [39m[1m[2m    3.07 kB[22m[22m[2m │ gzip:   1.07 kB[22m
+[2mdist/[22m[2massets/[22m[36mEmptySharedSectionActionBox-legacy-CErHt1Hj.js                 [39m[1m[2m    3.15 kB[22m[22m[2m │ gzip:   1.07 kB[22m
+[2mdist/[22m[2massets/[22m[36mAnimatedSpinner-legacy-jmjQlQzV.js                             [39m[1m[2m    3.19 kB[22m[22m[2m │ gzip:   1.03 kB[22m
+[2mdist/[22m[2massets/[22m[36mapiKeys.store-legacy-BR-ht01I.js                               [39m[1m[2m    3.26 kB[22m[22m[2m │ gzip:   0.93 kB[22m
+[2mdist/[22m[2massets/[22m[36mroles.store-legacy-Cs2tOJ6_.js                                 [39m[1m[2m    3.39 kB[22m[22m[2m │ gzip:   0.97 kB[22m
+[2mdist/[22m[2massets/[22m[36mPushConnectionTracker-legacy-BXa-adV7.js                       [39m[1m[2m    3.72 kB[22m[22m[2m │ gzip:   1.15 kB[22m
+[2mdist/[22m[2massets/[22m[36mVirtualSchema-legacy-emXH7jQZ.js                               [39m[1m[2m    3.78 kB[22m[22m[2m │ gzip:   1.27 kB[22m
+[2mdist/[22m[2massets/[22m[36mnodeTransforms-legacy-1anviIUs.js                              [39m[1m[2m    3.82 kB[22m[22m[2m │ gzip:   1.11 kB[22m
+[2mdist/[22m[2massets/[22m[36mWorkflowTagsDropdown-legacy-DGq7DJWz.js                        [39m[1m[2m    3.87 kB[22m[22m[2m │ gzip:   1.15 kB[22m
+[2mdist/[22m[2massets/[22m[36mInsightsChartFailed-legacy-B5LR2qVd.js                         [39m[1m[2m    3.87 kB[22m[22m[2m │ gzip:   1.25 kB[22m
+[2mdist/[22m[2massets/[22m[36musePageRedirectionHelper-legacy-Dq7P1ZSr.js                    [39m[1m[2m    3.95 kB[22m[22m[2m │ gzip:   1.16 kB[22m
+[2mdist/[22m[2massets/[22m[36mAnnotationTagsDropdown.ee-legacy-AFHSzAE6.js                   [39m[1m[2m    3.97 kB[22m[22m[2m │ gzip:   1.17 kB[22m
+[2mdist/[22m[2massets/[22m[36mInsightsChartTotal-legacy-3l5m03it.js                          [39m[1m[2m    3.98 kB[22m[22m[2m │ gzip:   1.26 kB[22m
+[2mdist/[22m[2massets/[22m[36mtemplateTransforms-legacy-APTUPB04.js                          [39m[1m[2m    4.02 kB[22m[22m[2m │ gzip:   1.13 kB[22m
+[2mdist/[22m[2massets/[22m[36mInsightsChartFailureRate-legacy-CjZSgCXI.js                    [39m[1m[2m    4.37 kB[22m[22m[2m │ gzip:   1.37 kB[22m
+[2mdist/[22m[2massets/[22m[36museExecutionHelpers-legacy-dZpaQkDC.js                         [39m[1m[2m    4.53 kB[22m[22m[2m │ gzip:   1.30 kB[22m
+[2mdist/[22m[2massets/[22m[36mSeverityTag-legacy-D0lqv2Z5.js                                 [39m[1m[2m    4.55 kB[22m[22m[2m │ gzip:   1.43 kB[22m
+[2mdist/[22m[2massets/[22m[36minsights.store-legacy-CNafAvaH.js                              [39m[1m[2m    4.63 kB[22m[22m[2m │ gzip:   1.19 kB[22m
+[2mdist/[22m[2massets/[22m[36mInsightsChartAverageRuntime-legacy-DZzW6Af-.js                 [39m[1m[2m    4.68 kB[22m[22m[2m │ gzip:   1.47 kB[22m
+[2mdist/[22m[2massets/[22m[36mWorkflowOnboardingView-legacy-BCBWt9XM.js                      [39m[1m[2m    4.77 kB[22m[22m[2m │ gzip:   1.34 kB[22m
+[2mdist/[22m[2massets/[22m[36mtemplateActions-legacy-k2Mi8deP.js                             [39m[1m[2m    4.82 kB[22m[22m[2m │ gzip:   1.37 kB[22m
+[2mdist/[22m[2massets/[22m[36mInsightsChartTimeSaved-legacy-D3PK7AXb.js                      [39m[1m[2m    4.86 kB[22m[22m[2m │ gzip:   1.52 kB[22m
+[2mdist/[22m[2massets/[22m[36mLogsPanel-legacy-D7i0pIdM.js                                   [39m[1m[2m    4.97 kB[22m[22m[2m │ gzip:   1.63 kB[22m
+[2mdist/[22m[2massets/[22m[36mCollectionParameter-legacy-D8WkpKkk.js                         [39m[1m[2m    5.03 kB[22m[22m[2m │ gzip:   1.65 kB[22m
+[2mdist/[22m[2massets/[22m[36mPageViewLayout-legacy-DaVsi9BM.js                              [39m[1m[2m    5.27 kB[22m[22m[2m │ gzip:   1.38 kB[22m
+[2mdist/[22m[2massets/[22m[36mSamlOnboarding-legacy-dz2kLuUd.js                              [39m[1m[2m    5.28 kB[22m[22m[2m │ gzip:   1.65 kB[22m
+[2mdist/[22m[2massets/[22m[36museKeybindings-legacy-rDgBO3fy.js                              [39m[1m[2m    5.31 kB[22m[22m[2m │ gzip:   1.72 kB[22m
+[2mdist/[22m[2massets/[22m[36mmcp.store-legacy-Cay7-qgf.js                                   [39m[1m[2m    5.43 kB[22m[22m[2m │ gzip:   1.36 kB[22m
+[2mdist/[22m[2massets/[22m[36mSetupWorkflowCredentialsButton-legacy-CK1Lq82d.js              [39m[1m[2m    5.45 kB[22m[22m[2m │ gzip:   1.64 kB[22m
+[2mdist/[22m[2massets/[22m[36mRunDataHtml-legacy-CV96Mj_E.js                                 [39m[1m[2m    5.46 kB[22m[22m[2m │ gzip:   1.45 kB[22m
+[2mdist/[22m[2massets/[22m[36mFileSaver.min-legacy-D7uxxng5.js                               [39m[1m[2m    5.58 kB[22m[22m[2m │ gzip:   1.83 kB[22m
+[2mdist/[22m[2massets/[22m[36mEntityUnAuthorised-legacy-DE9jNdsV.js                          [39m[1m[2m    5.80 kB[22m[22m[2m │ gzip:   1.81 kB[22m
+[2mdist/[22m[2massets/[22m[36mschemaPreview.store-legacy-C9e-Xgwi.js                         [39m[1m[2m    5.80 kB[22m[22m[2m │ gzip:   1.75 kB[22m
+[2mdist/[22m[2massets/[22m[36mnodeIcon-legacy-Tf6G9V8q.js                                    [39m[1m[2m    5.87 kB[22m[22m[2m │ gzip:   1.52 kB[22m
+[2mdist/[22m[2massets/[22m[36men-legacy-DJK4SpPN.js                                          [39m[1m[2m    5.88 kB[22m[22m[2m │ gzip:   1.92 kB[22m
+[2mdist/[22m[2massets/[22m[36museWorkflowActivate-legacy-D_4ZumyY.js                         [39m[1m[2m    5.89 kB[22m[22m[2m │ gzip:   1.58 kB[22m
+[2mdist/[22m[2massets/[22m[36mnpsSurvey.store-legacy-CNRKiUhk.js                             [39m[1m[2m    5.90 kB[22m[22m[2m │ gzip:   1.39 kB[22m
+[2mdist/[22m[2massets/[22m[36musage.store-legacy-DvU8O9rx.js                                 [39m[1m[2m    5.99 kB[22m[22m[2m │ gzip:   1.49 kB[22m
+[2mdist/[22m[2massets/[22m[36mDataTableActions-legacy-CMX8UwcO.js                            [39m[1m[2m    6.22 kB[22m[22m[2m │ gzip:   1.62 kB[22m
+[2mdist/[22m[2massets/[22m[36mEntityNotFound-legacy-kcL6rbdn.js                              [39m[1m[2m    6.22 kB[22m[22m[2m │ gzip:   1.71 kB[22m
+[2mdist/[22m[2massets/[22m[36mDemoFooter-legacy-CEJB7xcP.js                                  [39m[1m[2m    6.35 kB[22m[22m[2m │ gzip:   2.04 kB[22m
+[2mdist/[22m[2massets/[22m[36minsights.utils-legacy-CI9oHR-m.js                              [39m[1m[2m    6.41 kB[22m[22m[2m │ gzip:   1.69 kB[22m
+[2mdist/[22m[2massets/[22m[36mForgotMyPasswordView-legacy-C9EUHSqL.js                        [39m[1m[2m    6.52 kB[22m[22m[2m │ gzip:   1.92 kB[22m
+[2mdist/[22m[2massets/[22m[36mSetupView-legacy-Bxf69VuG.js                                   [39m[1m[2m    6.53 kB[22m[22m[2m │ gzip:   1.84 kB[22m
+[2mdist/[22m[2massets/[22m[36mexternalSecrets.ee.store-legacy-McWY1yTC.js                    [39m[1m[2m    6.56 kB[22m[22m[2m │ gzip:   1.55 kB[22m
+[2mdist/[22m[2massets/[22m[36museRecentResources-legacy-DJi720xk.js                          [39m[1m[2m    6.91 kB[22m[22m[2m │ gzip:   1.88 kB[22m
+[2mdist/[22m[2massets/[22m[36mKeyboardShortcutTooltip-legacy-B4u0p4gP.js                     [39m[1m[2m    7.00 kB[22m[22m[2m │ gzip:   1.70 kB[22m
+[2mdist/[22m[2massets/[22m[36museWorkflowsCache-legacy-CIcI_a8P.js                           [39m[1m[2m    7.07 kB[22m[22m[2m │ gzip:   1.66 kB[22m
+[2mdist/[22m[2massets/[22m[36mchatPanel.store-legacy-Bre-ey_p.js                             [39m[1m[2m    7.14 kB[22m[22m[2m │ gzip:   1.78 kB[22m
+[2mdist/[22m[2massets/[22m[36mchartjs.utils-legacy-B2OYJ5w1.js                               [39m[1m[2m    7.17 kB[22m[22m[2m │ gzip:   1.32 kB[22m
+[2mdist/[22m[2massets/[22m[36mdist-legacy-Cj1qCP8b.js                                        [39m[1m[2m    7.29 kB[22m[22m[2m │ gzip:   1.85 kB[22m
+[2mdist/[22m[2massets/[22m[36museTelemetryContext-legacy-BvlGl5L0.js                         [39m[1m[2m    7.39 kB[22m[22m[2m │ gzip:   1.97 kB[22m
+[2mdist/[22m[2massets/[22m[36mChatAgentAvatar-legacy-voqIlXb_.js                             [39m[1m[2m    7.57 kB[22m[22m[2m │ gzip:   1.90 kB[22m
+[2mdist/[22m[2massets/[22m[36museExecutionDebugging-legacy-CAxNIzl1.js                       [39m[1m[2m    7.64 kB[22m[22m[2m │ gzip:   2.08 kB[22m
+[2mdist/[22m[2massets/[22m[36mSignupView-legacy-ClumapG_.js                                  [39m[1m[2m    7.89 kB[22m[22m[2m │ gzip:   2.15 kB[22m
+[2mdist/[22m[2massets/[22m[36mdateformat-legacy-C4HUJTCr.js                                  [39m[1m[2m    7.90 kB[22m[22m[2m │ gzip:   2.43 kB[22m
+[2mdist/[22m[2massets/[22m[36mSelectedItemsInfo-legacy-Bw1KsjC5.js                           [39m[1m[2m    7.96 kB[22m[22m[2m │ gzip:   1.95 kB[22m
+[2mdist/[22m[2massets/[22m[36mNodeIcon-legacy-B0SNOjqZ.js                                    [39m[1m[2m    8.16 kB[22m[22m[2m │ gzip:   1.90 kB[22m
+[2mdist/[22m[2massets/[22m[36mTextWithHighlights-legacy-BkMBE92Y.js                          [39m[1m[2m    8.34 kB[22m[22m[2m │ gzip:   2.12 kB[22m
+[2mdist/[22m[2massets/[22m[36msso.store-legacy-DKIeaUu0.js                                   [39m[1m[2m    8.37 kB[22m[22m[2m │ gzip:   1.68 kB[22m
+[2mdist/[22m[2massets/[22m[36mCredentialIcon-legacy-DiNMKhz2.js                              [39m[1m[2m    8.38 kB[22m[22m[2m │ gzip:   2.02 kB[22m
+[2mdist/[22m[2massets/[22m[36mTimeAgo-legacy-B2E5Cszc.js                                     [39m[1m[2m    8.54 kB[22m[22m[2m │ gzip:   2.64 kB[22m
+[2mdist/[22m[2massets/[22m[36mChangePasswordView-legacy-B3qhodE5.js                          [39m[1m[2m    8.74 kB[22m[22m[2m │ gzip:   2.31 kB[22m
+[2mdist/[22m[2massets/[22m[36mProjectIcon-legacy-CbB6KuSI.js                                 [39m[1m[2m    8.76 kB[22m[22m[2m │ gzip:   2.17 kB[22m
+[2mdist/[22m[2massets/[22m[36mInsightsPaywall-legacy-B29o4TJe.js                             [39m[1m[2m    8.82 kB[22m[22m[2m │ gzip:   2.26 kB[22m
+[2mdist/[22m[2massets/[22m[36mcol-legacy-BnLTHqY_.js                                         [39m[1m[2m    8.82 kB[22m[22m[2m │ gzip:   1.88 kB[22m
+[2mdist/[22m[2massets/[22m[36mErrorView-legacy-BuR1MSa8.js                                   [39m[1m[2m    8.84 kB[22m[22m[2m │ gzip:   2.24 kB[22m
+[2mdist/[22m[2massets/[22m[36mSaveButton-legacy-Ff2OmxWR.js                                  [39m[1m[2m    8.95 kB[22m[22m[2m │ gzip:   2.14 kB[22m
+[2mdist/[22m[2massets/[22m[36mcloudPlan.store-legacy-D-lKzRVS.js                             [39m[1m[2m    9.32 kB[22m[22m[2m │ gzip:   2.32 kB[22m
+[2mdist/[22m[2massets/[22m[36mlogStreaming.store-legacy-GL4IO4-X.js                          [39m[1m[2m    9.43 kB[22m[22m[2m │ gzip:   2.01 kB[22m
+[2mdist/[22m[2massets/[22m[36m_initCloneObject-legacy-fsNpZD-E.js                            [39m[1m[2m    9.62 kB[22m[22m[2m │ gzip:   2.37 kB[22m
+[2mdist/[22m[2massets/[22m[36mProjectBreadcrumb-legacy-DOzidbN_.js                           [39m[1m[2m   10.14 kB[22m[22m[2m │ gzip:   2.43 kB[22m
+[2mdist/[22m[2massets/[22m[36moverlay-legacy-CWuHpXv1.js                                     [39m[1m[2m   10.19 kB[22m[22m[2m │ gzip:   2.50 kB[22m
+[2mdist/[22m[2massets/[22m[36mCopyInput-legacy-DzafBAyF.js                                   [39m[1m[2m   10.19 kB[22m[22m[2m │ gzip:   2.55 kB[22m
+[2mdist/[22m[2massets/[22m[36mexecutions.store-legacy-DcW_CDnn.js                            [39m[1m[2m   10.50 kB[22m[22m[2m │ gzip:   2.19 kB[22m
+[2mdist/[22m[2massets/[22m[36mDraggable-legacy-BgM51LAy.js                                   [39m[1m[2m   10.55 kB[22m[22m[2m │ gzip:   2.47 kB[22m
+[2mdist/[22m[2massets/[22m[36mversions.store-legacy-deIUd8ON.js                              [39m[1m[2m   11.26 kB[22m[22m[2m │ gzip:   2.67 kB[22m
+[2mdist/[22m[2massets/[22m[36musePinnedData-legacy-85Gige4A.js                               [39m[1m[2m   11.27 kB[22m[22m[2m │ gzip:   2.76 kB[22m
+[2mdist/[22m[2massets/[22m[36mfocusPanel.store-legacy-BfwGjkAT.js                            [39m[1m[2m   11.60 kB[22m[22m[2m │ gzip:   3.19 kB[22m
+[2mdist/[22m[2massets/[22m[36mMainSidebarUserArea-legacy-Dl3cxuQR.js                         [39m[1m[2m   11.65 kB[22m[22m[2m │ gzip:   2.74 kB[22m
+[2mdist/[22m[2massets/[22m[36mChatFile-legacy-ChynqrzQ.js                                    [39m[1m[2m   11.83 kB[22m[22m[2m │ gzip:   2.77 kB[22m
+[2mdist/[22m[2massets/[22m[36mdataTable.store-legacy-Dk3aZ57P.js                             [39m[1m[2m   11.85 kB[22m[22m[2m │ gzip:   2.47 kB[22m
+[2mdist/[22m[2massets/[22m[36mfolders.store-legacy-BV8d7MX_.js                               [39m[1m[2m   11.88 kB[22m[22m[2m │ gzip:   2.74 kB[22m
+[2mdist/[22m[2massets/[22m[36mTemplateCard-legacy-BCniiYQf.js                                [39m[1m[2m   12.09 kB[22m[22m[2m │ gzip:   3.05 kB[22m
+[2mdist/[22m[2massets/[22m[36mTemplatesView-legacy-ZB5UIJR1.js                               [39m[1m[2m   12.27 kB[22m[22m[2m │ gzip:   2.29 kB[22m
+[2mdist/[22m[2massets/[22m[36mWorkflowExecutionsLandingPage-legacy-DT9h6J0E.js               [39m[1m[2m   12.41 kB[22m[22m[2m │ gzip:   2.99 kB[22m
+[2mdist/[22m[2massets/[22m[36mModelByIdSelectorModal-legacy-DT7m2z2d.js                      [39m[1m[2m   12.42 kB[22m[22m[2m │ gzip:   3.03 kB[22m
+[2mdist/[22m[2massets/[22m[36mRunDataSearch-legacy-C9POa8_S.js                               [39m[1m[2m   13.18 kB[22m[22m[2m │ gzip:   3.33 kB[22m
+[2mdist/[22m[2massets/[22m[36mChatSidebarOpener-legacy-BEKv2OoL.js                           [39m[1m[2m   13.30 kB[22m[22m[2m │ gzip:   3.46 kB[22m
+[2mdist/[22m[2massets/[22m[36mResourceFiltersDropdown-legacy-7jGOJeSg.js                     [39m[1m[2m   14.43 kB[22m[22m[2m │ gzip:   3.28 kB[22m
+[2mdist/[22m[2massets/[22m[36museWorkflowSaving-legacy-DKqYthyj.js                           [39m[1m[2m   14.54 kB[22m[22m[2m │ gzip:   3.38 kB[22m
+[2mdist/[22m[2massets/[22m[36museDebounce-legacy-CvJRv60j.js                                 [39m[1m[2m   14.59 kB[22m[22m[2m │ gzip:   3.69 kB[22m
+[2mdist/[22m[2massets/[22m[36mAuthView-legacy-BdIJCRvr.js                                    [39m[1m[2m   14.72 kB[22m[22m[2m │ gzip:   2.92 kB[22m
+[2mdist/[22m[2massets/[22m[36mAlert-legacy-Bk4ZX9yV.js                                       [39m[1m[2m   14.77 kB[22m[22m[2m │ gzip:   2.88 kB[22m
+[2mdist/[22m[2massets/[22m[36mpath-browserify-legacy-PZw06cM9.js                             [39m[1m[2m   14.89 kB[22m[22m[2m │ gzip:   2.77 kB[22m
+[2mdist/[22m[2massets/[22m[36mWorkflowPreview-legacy-S0wpYVoZ.js                             [39m[1m[2m   15.03 kB[22m[22m[2m │ gzip:   3.32 kB[22m
+[2mdist/[22m[2massets/[22m[36museActions-legacy-CyA5ixBw.js                                  [39m[1m[2m   15.37 kB[22m[22m[2m │ gzip:   3.43 kB[22m
+[2mdist/[22m[2massets/[22m[36mpersonalizedTemplatesV3.store-legacy-CdjSi2zc.js               [39m[1m[2m   15.85 kB[22m[22m[2m │ gzip:   3.47 kB[22m
+[2mdist/[22m[2massets/[22m[36mPrebuiltAgentTemplatesView-legacy-BXPdbIDe.js                  [39m[1m[2m   15.95 kB[22m[22m[2m │ gzip:   3.31 kB[22m
+[2mdist/[22m[2massets/[22m[36mCredentialSelectorModal-legacy-DelW96kt.js                     [39m[1m[2m   16.11 kB[22m[22m[2m │ gzip:   3.61 kB[22m
+[2mdist/[22m[2massets/[22m[36mRunDataParsedAiContent-legacy-Bu40BWTb.js                      [39m[1m[2m   16.29 kB[22m[22m[2m │ gzip:   3.89 kB[22m
+[2mdist/[22m[2massets/[22m[36museBugReporting-legacy-Dh_WWhx6.js                             [39m[1m[2m   16.47 kB[22m[22m[2m │ gzip:   4.13 kB[22m
+[2mdist/[22m[2massets/[22m[36mradio-legacy-CVxdSEgU.js                                       [39m[1m[2m   16.60 kB[22m[22m[2m │ gzip:   3.18 kB[22m
+[2mdist/[22m[2massets/[22m[36mWorkflowExecutionsInfoAccordion-legacy-BVJcY3oj.js             [39m[1m[2m   16.86 kB[22m[22m[2m │ gzip:   3.60 kB[22m
+[2mdist/[22m[2massets/[22m[36mTemplatesWorkflowView-legacy-BmWzMU-O.js                       [39m[1m[2m   16.99 kB[22m[22m[2m │ gzip:   3.92 kB[22m
+[2mdist/[22m[2massets/[22m[36mTemplateDetails-legacy-CZ240XIV.js                             [39m[1m[2m   17.09 kB[22m[22m[2m │ gzip:   3.03 kB[22m
+[2mdist/[22m[2massets/[22m[36mModalDrawer-legacy-CeYsaJKN.js                                 [39m[1m[2m   17.28 kB[22m[22m[2m │ gzip:   4.15 kB[22m
+[2mdist/[22m[2massets/[22m[36mTemplatesCollectionView-legacy-BQtfnDhD.js                     [39m[1m[2m   17.36 kB[22m[22m[2m │ gzip:   3.96 kB[22m
+[2mdist/[22m[2massets/[22m[36mProjectRolesView-legacy-C6pMlsSo.js                            [39m[1m[2m   17.51 kB[22m[22m[2m │ gzip:   4.08 kB[22m
+[2mdist/[22m[2massets/[22m[36mProjectCardBadge-legacy-CZ6gjWsA.js                            [39m[1m[2m   17.97 kB[22m[22m[2m │ gzip:   3.54 kB[22m
+[2mdist/[22m[2massets/[22m[36mModal-legacy-BFHlJGPi.js                                       [39m[1m[2m   18.15 kB[22m[22m[2m │ gzip:   3.62 kB[22m
+[2mdist/[22m[2massets/[22m[36mbanners.store-legacy-DrOW6I5s.js                               [39m[1m[2m   18.21 kB[22m[22m[2m │ gzip:   3.62 kB[22m
+[2mdist/[22m[2massets/[22m[36mTagsDropdown-legacy-U6FP6uRi.js                                [39m[1m[2m   18.26 kB[22m[22m[2m │ gzip:   4.28 kB[22m
+[2mdist/[22m[2massets/[22m[36mInsightsTableWorkflows-legacy-CNnDAaWm.js                      [39m[1m[2m   18.33 kB[22m[22m[2m │ gzip:   4.24 kB[22m
+[2mdist/[22m[2massets/[22m[36mNodeCreation-legacy-CzSBUyqU.js                                [39m[1m[2m   20.01 kB[22m[22m[2m │ gzip:   4.71 kB[22m
+[2mdist/[22m[2massets/[22m[36mCredentialPicker-legacy-BhzrKBqi.js                            [39m[1m[2m   20.11 kB[22m[22m[2m │ gzip:   3.86 kB[22m
+[2mdist/[22m[2massets/[22m[36mMigrationRuleDetail-legacy-tw41OeAL.js                         [39m[1m[2m   20.33 kB[22m[22m[2m │ gzip:   4.78 kB[22m
+[2mdist/[22m[2massets/[22m[36mOAuthConsentView-legacy-DyJmrOa4.js                            [39m[1m[2m   20.54 kB[22m[22m[2m │ gzip:   4.38 kB[22m
+[2mdist/[22m[2massets/[22m[36mRunDataJson-legacy-CSWl_Tss.js                                 [39m[1m[2m   20.96 kB[22m[22m[2m │ gzip:   4.38 kB[22m
+[2mdist/[22m[2massets/[22m[36mevaluation.constants-legacy-ChH7qQ6A.js                        [39m[1m[2m   21.62 kB[22m[22m[2m │ gzip:   5.28 kB[22m
+[2mdist/[22m[2massets/[22m[36mSettingsExternalSecrets-legacy-C5sQxVfI.js                     [39m[1m[2m   22.36 kB[22m[22m[2m │ gzip:   4.66 kB[22m
+[2mdist/[22m[2massets/[22m[36mSettingsView-legacy-0NbG2D8F.js                                [39m[1m[2m   22.96 kB[22m[22m[2m │ gzip:   4.22 kB[22m
+[2mdist/[22m[2massets/[22m[36mdialog-legacy-DukCVSug.js                                      [39m[1m[2m   23.03 kB[22m[22m[2m │ gzip:   4.82 kB[22m
+[2mdist/[22m[2massets/[22m[36mInsightsSummary-legacy-CywjNZDi.js                             [39m[1m[2m   23.24 kB[22m[22m[2m │ gzip:   5.14 kB[22m
+[2mdist/[22m[2massets/[22m[36mAgentEditorModal-legacy-Bq1LuKCJ.js                            [39m[1m[2m   23.31 kB[22m[22m[2m │ gzip:   4.81 kB[22m
+[2mdist/[22m[2massets/[22m[36mMigrationRules-legacy-DLPeYklB.js                              [39m[1m[2m   23.62 kB[22m[22m[2m │ gzip:   4.37 kB[22m
+[2mdist/[22m[2massets/[22m[36mSetupWorkflowFromTemplateView-legacy-8Qm05Knu.js               [39m[1m[2m   23.64 kB[22m[22m[2m │ gzip:   5.14 kB[22m
+[2mdist/[22m[2massets/[22m[36mDataTableView-legacy-2UI2EllI.js                               [39m[1m[2m   24.44 kB[22m[22m[2m │ gzip:   5.35 kB[22m
+[2mdist/[22m[2massets/[22m[36mProviderSettingsModal-legacy-CrDXIsvB.js                       [39m[1m[2m   24.62 kB[22m[22m[2m │ gzip:   4.85 kB[22m
+[2mdist/[22m[2massets/[22m[36museToast-legacy-vmIDRWWC.js                                    [39m[1m[2m   24.82 kB[22m[22m[2m │ gzip:   6.40 kB[22m
+[2mdist/[22m[2massets/[22m[36mProjectSharing-legacy-B4Kv3ozF.js                              [39m[1m[2m   24.88 kB[22m[22m[2m │ gzip:   4.68 kB[22m
+[2mdist/[22m[2massets/[22m[36mSigninView-legacy-B0KnENPF.js                                  [39m[1m[2m   25.35 kB[22m[22m[2m │ gzip:   5.49 kB[22m
+[2mdist/[22m[2massets/[22m[36mToolsSelectorModal-legacy-KNYF6STu.js                          [39m[1m[2m   25.46 kB[22m[22m[2m │ gzip:   5.23 kB[22m
+[2mdist/[22m[2massets/[22m[36mExternalSecretsProviderConnectionSwitch.ee-legacy-zZdstImx.js  [39m[1m[2m   25.47 kB[22m[22m[2m │ gzip:   9.46 kB[22m
+[2mdist/[22m[2massets/[22m[36mCommunityNodeUpdateInfo-legacy-7ZUutgSL.js                     [39m[1m[2m   25.49 kB[22m[22m[2m │ gzip:   4.76 kB[22m
+[2mdist/[22m[2massets/[22m[36mProjectRoleView-legacy-C_ktSBw8.js                             [39m[1m[2m   26.46 kB[22m[22m[2m │ gzip:   5.44 kB[22m
+[2mdist/[22m[2massets/[22m[36mSetupTemplateFormStep-legacy-B-wIAEPA.js                       [39m[1m[2m   27.89 kB[22m[22m[2m │ gzip:   5.08 kB[22m
+[2mdist/[22m[2massets/[22m[36maiTemplatesStarterCollection.store-legacy-Db2YLwqn.js          [39m[1m[2m   27.89 kB[22m[22m[2m │ gzip:   5.48 kB[22m
+[2mdist/[22m[2massets/[22m[36mFixedCollectionParameter-legacy-BWAKQIIN.js                    [39m[1m[2m   28.86 kB[22m[22m[2m │ gzip:   6.27 kB[22m
+[2mdist/[22m[2massets/[22m[36mSettingsPersonalView-legacy-Bpt-H3Te.js                        [39m[1m[2m   29.22 kB[22m[22m[2m │ gzip:   5.77 kB[22m
+[2mdist/[22m[2massets/[22m[36mbuttons.esm-legacy-CRXYRZov.js                                 [39m[1m[2m   29.37 kB[22m[22m[2m │ gzip:   7.94 kB[22m
+[2mdist/[22m[2massets/[22m[36micon-legacy-DzkKsd3h.js                                        [39m[1m[2m   29.43 kB[22m[22m[2m │ gzip:   5.67 kB[22m
+[2mdist/[22m[2massets/[22m[36mSettingsApiView-legacy-Cw4OdYqm.js                             [39m[1m[2m   29.45 kB[22m[22m[2m │ gzip:   5.86 kB[22m
+[2mdist/[22m[2massets/[22m[36mToolsSelector-legacy-BxEavd3T.js                               [39m[1m[2m   29.49 kB[22m[22m[2m │ gzip:   5.83 kB[22m
+[2mdist/[22m[2massets/[22m[36mreadyToRun.store-legacy-D7sWxjAr.js                            [39m[1m[2m   29.75 kB[22m[22m[2m │ gzip:   5.84 kB[22m
+[2mdist/[22m[2massets/[22m[36mTemplateList-legacy-C4KsF8vl.js                                [39m[1m[2m   30.71 kB[22m[22m[2m │ gzip:   5.02 kB[22m
+[2mdist/[22m[2massets/[22m[36mChatAgentsView-legacy-oPXQckJj.js                              [39m[1m[2m   30.81 kB[22m[22m[2m │ gzip:   5.83 kB[22m
+[2mdist/[22m[2massets/[22m[36museMessage-legacy-BVH5nWAS.js                                  [39m[1m[2m   32.09 kB[22m[22m[2m │ gzip:   6.75 kB[22m
+[2mdist/[22m[2massets/[22m[36mSettingsLogStreamingView-legacy-sFtI1QdT.js                    [39m[1m[2m   33.72 kB[22m[22m[2m │ gzip:   6.45 kB[22m
+[2mdist/[22m[2massets/[22m[36musePushConnection-legacy-CxKEkzMx.js                           [39m[1m[2m   33.87 kB[22m[22m[2m │ gzip:   7.03 kB[22m
+[2mdist/[22m[2massets/[22m[36mSettingsCommunityNodesView-legacy-BGY-vlaU.js                  [39m[1m[2m   34.21 kB[22m[22m[2m │ gzip:   6.40 kB[22m
+[2mdist/[22m[2massets/[22m[36mWorkflowActivator-legacy-D4AHUOZ-.js                           [39m[1m[2m   34.90 kB[22m[22m[2m │ gzip:   6.26 kB[22m
+[2mdist/[22m[2massets/[22m[36mTestRunDetailView-legacy-II5VqjQ7.js                           [39m[1m[2m   36.68 kB[22m[22m[2m │ gzip:   6.95 kB[22m
+[2mdist/[22m[2massets/[22m[36mchat.store-legacy-C2TlTbdc.js                                  [39m[1m[2m   36.83 kB[22m[22m[2m │ gzip:   6.75 kB[22m
+[2mdist/[22m[2massets/[22m[36mInsightsDashboard-legacy-ClFdOptg.js                           [39m[1m[2m   38.06 kB[22m[22m[2m │ gzip:   8.05 kB[22m
+[2mdist/[22m[2massets/[22m[36mSettingsUsageAndPlan-legacy-BWpbuOmC.js                        [39m[1m[2m   38.29 kB[22m[22m[2m │ gzip:   6.63 kB[22m
+[2mdist/[22m[2massets/[22m[36mSettingsSourceControl-legacy-DGX3oI8v.js                       [39m[1m[2m   38.80 kB[22m[22m[2m │ gzip:   6.54 kB[22m
+[2mdist/[22m[2massets/[22m[36mCredentialsView-legacy-Xv4-2igr.js                             [39m[1m[2m   39.70 kB[22m[22m[2m │ gzip:   8.10 kB[22m
+[2mdist/[22m[2massets/[22m[36mProjectVariables-legacy-BIb92Xcg.js                            [39m[1m[2m   42.00 kB[22m[22m[2m │ gzip:   7.90 kB[22m
+[2mdist/[22m[2massets/[22m[36mtemplates.store-legacy-DODch03r.js                             [39m[1m[2m   42.72 kB[22m[22m[2m │ gzip:  13.58 kB[22m
+[2mdist/[22m[2massets/[22m[36mEvaluationsView-legacy-C8AUeXPF.js                             [39m[1m[2m   43.31 kB[22m[22m[2m │ gzip:   7.39 kB[22m
+[2mdist/[22m[2massets/[22m[36mxml-legacy-AlS_MIEy.js                                         [39m[1m[2m   43.70 kB[22m[22m[2m │ gzip:   7.85 kB[22m
+[2mdist/[22m[2massets/[22m[36mProjectHeader-legacy--icl7Myi.js                               [39m[1m[2m   44.08 kB[22m[22m[2m │ gzip:   7.81 kB[22m
+[2mdist/[22m[2massets/[22m[36mExecutionsTime-legacy-C3dpe8TC.js                              [39m[1m[2m   44.08 kB[22m[22m[2m │ gzip:   6.71 kB[22m
+[2mdist/[22m[2massets/[22m[36mChatSidebar-legacy-BSJooJ7d.js                                 [39m[1m[2m   44.52 kB[22m[22m[2m │ gzip:   7.82 kB[22m
+[2mdist/[22m[2massets/[22m[36mRunDataTable-legacy-BCLpIVDL.js                                [39m[1m[2m   47.66 kB[22m[22m[2m │ gzip:   9.44 kB[22m
+[2mdist/[22m[2massets/[22m[36mCalendarDate-legacy-BUvNgcoo.js                                [39m[1m[2m   48.57 kB[22m[22m[2m │ gzip:   8.83 kB[22m
+[2mdist/[22m[2massets/[22m[36mEvaluationsRootView-legacy-D5R27hfE.js                         [39m[1m[2m   49.71 kB[22m[22m[2m │ gzip:   7.45 kB[22m
+[2mdist/[22m[2massets/[22m[36mResourcesListLayout-legacy-BZWJfOf-.js                         [39m[1m[2m   50.47 kB[22m[22m[2m │ gzip:   9.17 kB[22m
+[2mdist/[22m[2massets/[22m[36museRunWorkflow-legacy-CLoh682l.js                              [39m[1m[2m   50.53 kB[22m[22m[2m │ gzip:  11.35 kB[22m
+[2mdist/[22m[2massets/[22m[36mvue-json-pretty-legacy-DXTjoBRT.js                             [39m[1m[2m   53.83 kB[22m[22m[2m │ gzip:  11.49 kB[22m
+[2mdist/[22m[2massets/[22m[36mreadyToRunWorkflows.store-legacy-C8I4W32F.js                   [39m[1m[2m   56.10 kB[22m[22m[2m │ gzip:  10.84 kB[22m
+[2mdist/[22m[2massets/[22m[36mWorkflowExecutionsPreview-legacy-DBKy2-o4.js                   [39m[1m[2m   59.22 kB[22m[22m[2m │ gzip:   9.26 kB[22m
+[2mdist/[22m[2massets/[22m[36mSettingsUsersView-legacy-C6dOxVNX.js                           [39m[1m[2m   59.66 kB[22m[22m[2m │ gzip:   9.82 kB[22m
+[2mdist/[22m[2massets/[22m[36mWorkerView-legacy-ibaN3s3k.js                                  [39m[1m[2m   59.75 kB[22m[22m[2m │ gzip:   8.53 kB[22m
+[2mdist/[22m[2massets/[22m[36massistant.store-legacy-D6ePhPKe.js                             [39m[1m[2m   60.12 kB[22m[22m[2m │ gzip:  11.75 kB[22m
+[2mdist/[22m[2massets/[22m[36mWorkflowHistory-legacy-CopP9afc.js                             [39m[1m[2m   60.88 kB[22m[22m[2m │ gzip:  10.01 kB[22m
+[2mdist/[22m[2massets/[22m[36mExecutionsView-legacy-B2gFeAwX.js                              [39m[1m[2m   65.20 kB[22m[22m[2m │ gzip:  10.46 kB[22m
+[2mdist/[22m[2massets/[22m[36museLogsTreeExpand-legacy-BGqViC5h.js                           [39m[1m[2m   65.69 kB[22m[22m[2m │ gzip:  12.92 kB[22m
+[2mdist/[22m[2massets/[22m[36mNodeDetailsViewV2-legacy-CaThHk1x.js                           [39m[1m[2m   66.47 kB[22m[22m[2m │ gzip:  13.11 kB[22m
+[2mdist/[22m[2massets/[22m[36mWorkflowExecutionsView-legacy-7HrhHzNa.js                      [39m[1m[2m   67.77 kB[22m[22m[2m │ gzip:  11.09 kB[22m
+[2mdist/[22m[2massets/[22m[36mProjectSettings-legacy-CWl2Rvz4.js                             [39m[1m[2m   68.10 kB[22m[22m[2m │ gzip:  10.98 kB[22m
+[2mdist/[22m[2massets/[22m[36mmerge-legacy-BDemVjXK.js                                       [39m[1m[2m   74.08 kB[22m[22m[2m │ gzip:  11.17 kB[22m
+[2mdist/[22m[2massets/[22m[36mNodeDetailsView-legacy-DqNpSTa7.js                             [39m[1m[2m   78.50 kB[22m[22m[2m │ gzip:  13.97 kB[22m
+[2mdist/[22m[2massets/[22m[36msemver-legacy-k0SDdW3C.js                                      [39m[1m[2m   78.96 kB[22m[22m[2m │ gzip:  12.84 kB[22m
+[2mdist/[22m[2massets/[22m[36mcore-legacy-Dbm4ZHjr.js                                        [39m[1m[2m   80.01 kB[22m[22m[2m │ gzip:  17.12 kB[22m
+[2mdist/[22m[2massets/[22m[36mSettingsSso-legacy-BQhfvPm9.js                                 [39m[1m[2m   80.01 kB[22m[22m[2m │ gzip:  11.94 kB[22m
+[2mdist/[22m[2massets/[22m[36mTemplatesSearchView-legacy-B1U7q1pT.js                         [39m[1m[2m   89.80 kB[22m[22m[2m │ gzip:  15.40 kB[22m
+[2mdist/[22m[2massets/[22m[36museCommandBar-legacy-w4aJ8FeA.js                               [39m[1m[2m   90.05 kB[22m[22m[2m │ gzip:  14.63 kB[22m
+[2mdist/[22m[2massets/[22m[36mSettingsMCPView-legacy-X3E5c8pZ.js                             [39m[1m[2m   91.79 kB[22m[22m[2m │ gzip:  11.73 kB[22m
+[2mdist/[22m[2massets/[22m[36museCanvasOperations-legacy-CZD4PAXY.js                         [39m[1m[2m   92.27 kB[22m[22m[2m │ gzip:  18.29 kB[22m
+[2mdist/[22m[2massets/[22m[36mMainSidebar-legacy-ClqX1u0z.js                                 [39m[1m[2m   92.75 kB[22m[22m[2m │ gzip:  14.00 kB[22m
+[2mdist/[22m[2massets/[22m[36mItemsRenderer-legacy-Cz5VDaYc.js                               [39m[1m[2m  102.18 kB[22m[22m[2m │ gzip:  12.83 kB[22m
+[2mdist/[22m[2massets/[22m[36mAddDataTableModal-legacy-BcM17eAb.js                           [39m[1m[2m  105.63 kB[22m[22m[2m │ gzip:  19.73 kB[22m
+[2mdist/[22m[2massets/[22m[36mSettingsLdapView-legacy-xzQ3OMQV.js                            [39m[1m[2m  106.59 kB[22m[22m[2m │ gzip:  16.63 kB[22m
+[2mdist/[22m[2massets/[22m[36mChatView-legacy-B_f7DaTz.js                                    [39m[1m[2m  107.61 kB[22m[22m[2m │ gzip:  17.50 kB[22m
+[2mdist/[22m[2massets/[22m[36mTriggerPanel-legacy-Bo-6i5C6.js                                [39m[1m[2m  109.78 kB[22m[22m[2m │ gzip:  17.29 kB[22m
+[2mdist/[22m[2massets/[22m[36mexports-legacy-COvxY4M6.js                                     [39m[1m[2m  119.06 kB[22m[22m[2m │ gzip:  28.91 kB[22m
+[2mdist/[22m[2massets/[22m[36mVirtualSchema-legacy-CB7FrZMy.js                               [39m[1m[2m  130.52 kB[22m[22m[2m │ gzip:  27.67 kB[22m
+[2mdist/[22m[2massets/[22m[36mempty-legacy-ZG0-xpne.js                                       [39m[1m[2m  130.62 kB[22m[22m[2m │ gzip:  22.07 kB[22m
+[2mdist/[22m[2massets/[22m[36mNodeCreator-legacy-Bc_TD8wE.js                                 [39m[1m[2m  132.29 kB[22m[22m[2m │ gzip:  20.30 kB[22m
+[2mdist/[22m[2massets/[22m[36mMainHeader-legacy-Cq3EBODH.js                                  [39m[1m[2m  137.14 kB[22m[22m[2m │ gzip:  23.54 kB[22m
+[2mdist/[22m[2massets/[22m[36mNodeView-legacy-DfGy36dP.js                                    [39m[1m[2m  165.23 kB[22m[22m[2m │ gzip:  28.88 kB[22m
+[2mdist/[22m[2massets/[22m[36mnodeCreator.store-legacy-DA6_JBHr.js                           [39m[1m[2m  170.83 kB[22m[22m[2m │ gzip:  27.03 kB[22m
+[2mdist/[22m[2massets/[22m[36m_baseOrderBy-legacy-BWot-sK7.js                                [39m[1m[2m  171.36 kB[22m[22m[2m │ gzip:  40.55 kB[22m
+[2mdist/[22m[2massets/[22m[36mNodeSettings-legacy-tZAOxyqU.js                                [39m[1m[2m  182.92 kB[22m[22m[2m │ gzip:  29.77 kB[22m
+[2mdist/[22m[2massets/[22m[36mtable-legacy-DIRUHd6E.js                                       [39m[1m[2m  195.64 kB[22m[22m[2m │ gzip:  39.43 kB[22m
+[2mdist/[22m[2massets/[22m[36mvue-legacy-DYOFx85F.js                                         [39m[1m[2m  199.57 kB[22m[22m[2m │ gzip:  41.81 kB[22m
+[2mdist/[22m[2massets/[22m[36mrouter-legacy-BW3PqRQZ.js                                      [39m[1m[2m  202.16 kB[22m[22m[2m │ gzip:  33.03 kB[22m
+[2mdist/[22m[2massets/[22m[36mLogsPanel-legacy-CGVLE5_B.js                                   [39m[1m[2m  216.36 kB[22m[22m[2m │ gzip:  31.81 kB[22m
+[2mdist/[22m[2massets/[22m[36mdate-picker-legacy-DbuLVPVt.js                                 [39m[1m[2m  224.74 kB[22m[22m[2m │ gzip:  36.11 kB[22m
+[2mdist/[22m[2massets/[22m[36mWorkflowsView-legacy-Bi-xXlGA.js                               [39m[1m[2m  233.12 kB[22m[22m[2m │ gzip:  32.83 kB[22m
+[2mdist/[22m[2massets/[22m[36mtruncate-legacy-CTVKxrHf.js                                    [39m[1m[2m  243.04 kB[22m[22m[2m │ gzip:  51.29 kB[22m
+[2mdist/[22m[2massets/[22m[36mRunDataJsonActions-legacy-DI1Pko7S.js                          [39m[1m[2m  270.92 kB[22m[22m[2m │ gzip:  41.95 kB[22m
+[2mdist/[22m[2massets/[22m[36mlanguageModules-legacy-CbBlREl1.js                             [39m[1m[2m  332.62 kB[22m[22m[2m │ gzip:  77.93 kB[22m
+[2mdist/[22m[2massets/[22m[36mvue.runtime.esm-bundler-legacy--Sn1h8On.js                     [39m[1m[2m  344.70 kB[22m[22m[2m │ gzip:  75.07 kB[22m
+[2mdist/[22m[2massets/[22m[36museImportCurlCommand-legacy-CivcoBuS.js                        [39m[1m[2m  424.96 kB[22m[22m[2m │ gzip:  69.16 kB[22m
+[2mdist/[22m[2massets/[22m[36mchart-legacy-B9hE9qID.js                                       [39m[1m[2m  460.05 kB[22m[22m[2m │ gzip:  96.73 kB[22m
+[2mdist/[22m[2massets/[22m[36msanitize-html-legacy-vIyjvWWp.js                               [39m[1m[33m  535.77 kB[39m[22m[2m │ gzip: 111.81 kB[22m
+[2mdist/[22m[2massets/[22m[36m_MapCache-legacy-DgqcrmrB.js                                   [39m[1m[33m  636.84 kB[39m[22m[2m │ gzip: 129.09 kB[22m
+[2mdist/[22m[2massets/[22m[36museCanvasMapping-legacy-BpDDFsjU.js                            [39m[1m[33m  753.23 kB[39m[22m[2m │ gzip: 124.22 kB[22m
+[2mdist/[22m[2massets/[22m[36mNDVEmptyState-legacy-BFPaFeot.js                               [39m[1m[33m  917.42 kB[39m[22m[2m │ gzip: 191.67 kB[22m
+[2mdist/[22m[2massets/[22m[36museTelemetry-legacy-CVmOENQk.js                                [39m[1m[33m1,198.25 kB[39m[22m[2m │ gzip: 237.38 kB[22m
+[2mdist/[22m[2massets/[22m[36mes-legacy-C6r-cWha.js                                          [39m[1m[33m1,349.80 kB[39m[22m[2m │ gzip: 328.80 kB[22m
+[2mdist/[22m[2massets/[22m[36misEmpty-legacy-ChOhLERt.js                                     [39m[1m[33m1,995.13 kB[39m[22m[2m │ gzip: 432.26 kB[22m
+[2mdist/[22m[2massets/[22m[36mParameterInputList-legacy-coQvRgDq.js                          [39m[1m[33m2,055.68 kB[39m[22m[2m │ gzip: 394.06 kB[22m
+[2mdist/[22m[2massets/[22m[36mDataTableDetailsView-legacy-DzUnDXt2.js                        [39m[1m[33m2,114.94 kB[39m[22m[2m │ gzip: 395.19 kB[22m
+[2mdist/[22m[2massets/[22m[36mindex-legacy-CtPGKTPE.js                                       [39m[1m[33m2,147.53 kB[39m[22m[2m │ gzip: 326.97 kB[22m
+[2mdist/[22m[2massets/[22m[36msrc-legacy-DqAlNtzu.js                                         [39m[1m[33m3,132.16 kB[39m[22m[2m │ gzip: 505.29 kB[22m
+[2mdist/[22m[2massets/[22m[36mconstants-legacy-KW5lE2eo.js                                   [39m[1m[33m3,707.38 kB[39m[22m[2m │ gzip: 633.65 kB[22m
+[33m[EVAL] Warning:[0m Use of `eval` function is strongly discouraged as it poses security risks and may cause issues with minification.
+      [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m ../../../node_modules/.pnpm/web-tree-sitter@0.24.3/node_modules/web-tree-sitter/tree-sitter.js:1195:37 [38;5;246m][0m
+      [38;5;246m│[0m
+ [38;5;246m1195 │[0m [38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249mA[0m[38;5;249mS[0m[38;5;249mM[0m[38;5;249m_[0m[38;5;249mC[0m[38;5;249mO[0m[38;5;249mN[0m[38;5;249mS[0m[38;5;249mT[0m[38;5;249mS[0m[38;5;249m[[0m[38;5;249ms[0m[38;5;249mt[0m[38;5;249ma[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249m][0m[38;5;249m [0m[38;5;249m=[0m[38;5;249m [0meval[38;5;249m([0m[38;5;249mf[0m[38;5;249mu[0m[38;5;249mn[0m[38;5;249mc[0m[38;5;249m)[0m[38;5;249m;[0m
+ [38;5;240m     │[0m                                     ──┬─  
+ [38;5;240m     │[0m                                       ╰─── Use of `eval` function here.
+[38;5;246m──────╯[0m
+
+[33m[EVAL] Warning:[0m Use of `eval` function is strongly discouraged as it poses security risks and may cause issues with minification.
+      [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m ../../../node_modules/.pnpm/web-tree-sitter@0.24.3/node_modules/web-tree-sitter/tree-sitter.js:1221:39 [38;5;246m][0m
+      [38;5;246m│[0m
+ [38;5;246m1221 │[0m [38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249mm[0m[38;5;249mo[0m[38;5;249md[0m[38;5;249mu[0m[38;5;249ml[0m[38;5;249me[0m[38;5;249mE[0m[38;5;249mx[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249ms[0m[38;5;249m[[0m[38;5;249mn[0m[38;5;249ma[0m[38;5;249mm[0m[38;5;249me[0m[38;5;249m][0m[38;5;249m [0m[38;5;249m=[0m[38;5;249m [0meval[38;5;249m([0m[38;5;249mf[0m[38;5;249mu[0m[38;5;249mn[0m[38;5;249mc[0m[38;5;249m)[0m[38;5;249m;[0m
+ [38;5;240m     │[0m                                       ──┬─  
+ [38;5;240m     │[0m                                         ╰─── Use of `eval` function here.
+[38;5;246m──────╯[0m
+
+<script src="/{{BASE_PATH}}/static/base-path.js"> in "/index.html" can't be bundled without type="module" attribute
+<script src="/{{BASE_PATH}}/static/posthog.init.js"> in "/index.html" can't be bundled without type="module" attribute
+[2Ktransforming...[plugin rolldown:vite-resolve] Module "os" has been externalized for browser compatibility, imported by "/root/project-flexai/flexai/node_modules/.pnpm/recast@0.22.0/node_modules/recast/lib/util.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[32m✓[39m 6592 modules transformed.
+rendering chunks...
+[plugin builtin:reporter] 
+(!) /root/project-flexai/flexai/packages/frontend/editor-ui/src/features/ndv/parameters/components/CollectionParameter.vue is dynamically imported by /root/project-flexai/flexai/packages/frontend/editor-ui/src/features/ndv/parameters/components/ParameterInputList.vue?vue&type=script&setup=true&lang.ts but also statically imported by /root/project-flexai/flexai/packages/frontend/editor-ui/src/features/ndv/parameters/components/MultipleParameter.vue?vue&type=script&setup=true&lang.ts, dynamic import will not move module into another chunk.
+
+[vite-plugin-static-copy] Copied 2 items.
+computing gzip size...
+[2mdist/[22m[2massets/[22m[32msqlite3-opfs-async-proxy-vVtmDGHX.js                    [39m[1m[2m   15.79 kB[22m[22m
+[2mdist/[22m[32mindex.html                                                     [39m[1m[2m   16.57 kB[22m[22m[2m │ gzip:   3.33 kB[22m
+[2mdist/[22m[2massets/[22m[32melement-icons-B-tDfklg.woff                             [39m[1m[2m   28.20 kB[22m[22m
+[2mdist/[22m[2massets/[22m[32melement-icons-_lZGOqcG.ttf                              [39m[1m[2m   55.95 kB[22m[22m
+[2mdist/[22m[2massets/[22m[32mCommitMonoVariable-ytizKI8U.woff2                       [39m[1m[2m   86.76 kB[22m[22m
+[2mdist/[22m[2massets/[22m[32mdoppler-B__k0MeW.webp                                   [39m[1m[2m  315.06 kB[22m[22m
+[2mdist/[22m[2massets/[22m[32mInterVariable-DiVDrmQJ.woff2                            [39m[1m[2m  352.24 kB[22m[22m
+[2mdist/[22m[2massets/[22m[32msqlite3-worker1-bundler-friendly-BOYmhhGN.js            [39m[1m[2m  362.94 kB[22m[22m
+[2mdist/[22m[2massets/[22m[32mworker-CIvWfg3a.js                                      [39m[1m[2m  377.11 kB[22m[22m
+[2mdist/[22m[2massets/[22m[32mInterVariable-Italic-FCBEiFp6.woff2                     [39m[1m[2m  387.97 kB[22m[22m
+[2mdist/[22m[2massets/[22m[32msqlite3-DBpDb1lf.wasm                                   [39m[1m[2m  856.44 kB[22m[22m[2m │ gzip: 396.48 kB[22m
+[2mdist/[22m[2massets/[22m[32mtypescript.worker-DK2Qdfu7.js                           [39m[1m[2m7,973.55 kB[22m[22m
+[2mdist/[22m[2massets/[22m[35mEntityNotFound-D6gi5ngN.css                             [39m[1m[2m    0.19 kB[22m[22m[2m │ gzip:   0.16 kB[22m
+[2mdist/[22m[2massets/[22m[35mEntityUnAuthorised-D3XTbU6Y.css                         [39m[1m[2m    0.19 kB[22m[22m[2m │ gzip:   0.16 kB[22m
+[2mdist/[22m[2massets/[22m[35mProjectRolesView-CZqQ656d.css                           [39m[1m[2m    0.26 kB[22m[22m[2m │ gzip:   0.17 kB[22m
+[2mdist/[22m[2massets/[22m[35mSeverityTag-C0hCvHeU.css                                [39m[1m[2m    0.27 kB[22m[22m[2m │ gzip:   0.15 kB[22m
+[2mdist/[22m[2massets/[22m[35mMigrationRuleDetail-4tgkxxhX.css                        [39m[1m[2m    0.42 kB[22m[22m[2m │ gzip:   0.28 kB[22m
+[2mdist/[22m[2massets/[22m[35mNDVEmptyState-Bho0_Ev8.css                              [39m[1m[2m    0.52 kB[22m[22m[2m │ gzip:   0.28 kB[22m
+[2mdist/[22m[2massets/[22m[35mAnimatedSpinner-CoP6Lyme.css                            [39m[1m[2m    0.57 kB[22m[22m[2m │ gzip:   0.19 kB[22m
+[2mdist/[22m[2massets/[22m[35mProjectRoleView-Ds9qdhh9.css                            [39m[1m[2m    0.86 kB[22m[22m[2m │ gzip:   0.42 kB[22m
+[2mdist/[22m[2massets/[22m[35mMigrationRules-wMqorxjv.css                             [39m[1m[2m    1.42 kB[22m[22m[2m │ gzip:   0.50 kB[22m
+[2mdist/[22m[2massets/[22m[35mRunDataHtml-Bu3RZcuV.css                                [39m[1m[2m    2.53 kB[22m[22m[2m │ gzip:   0.46 kB[22m
+[2mdist/[22m[2massets/[22m[35mChatAgentAvatar-krKyb5iB.css                            [39m[1m[2m    2.54 kB[22m[22m[2m │ gzip:   0.46 kB[22m
+[2mdist/[22m[2massets/[22m[35mCredentialIcon-bZrcXcyJ.css                             [39m[1m[2m    2.56 kB[22m[22m[2m │ gzip:   0.47 kB[22m
+[2mdist/[22m[2massets/[22m[35mNodeIcon-eaW3atZy.css                                   [39m[1m[2m    2.57 kB[22m[22m[2m │ gzip:   0.48 kB[22m
+[2mdist/[22m[2massets/[22m[35mModalDrawer-B-12esvU.css                                [39m[1m[2m    2.58 kB[22m[22m[2m │ gzip:   0.48 kB[22m
+[2mdist/[22m[2massets/[22m[35mTextWithHighlights-BgbTzzK2.css                         [39m[1m[2m    2.63 kB[22m[22m[2m │ gzip:   0.51 kB[22m
+[2mdist/[22m[2massets/[22m[35mKeyboardShortcutTooltip-pRLqnHdh.css                    [39m[1m[2m    2.65 kB[22m[22m[2m │ gzip:   0.52 kB[22m
+[2mdist/[22m[2massets/[22m[35mRunDataJsonActions-CZx7rSSE.css                         [39m[1m[2m    2.65 kB[22m[22m[2m │ gzip:   0.52 kB[22m
+[2mdist/[22m[2massets/[22m[35mInsightsPaywall-CE5W3W4m.css                            [39m[1m[2m    2.70 kB[22m[22m[2m │ gzip:   0.56 kB[22m
+[2mdist/[22m[2massets/[22m[35mDraggable-DfBtatxg.css                                  [39m[1m[2m    2.72 kB[22m[22m[2m │ gzip:   0.55 kB[22m
+[2mdist/[22m[2massets/[22m[35mExternalSecretsProviderConnectionSwitch-dpp96SMy.css    [39m[1m[2m    2.74 kB[22m[22m[2m │ gzip:   0.56 kB[22m
+[2mdist/[22m[2massets/[22m[35mChatSidebarOpener-CxM-3LAt.css                          [39m[1m[2m    2.83 kB[22m[22m[2m │ gzip:   0.61 kB[22m
+[2mdist/[22m[2massets/[22m[35mModelByIdSelectorModal-CF6s_557.css                     [39m[1m[2m    2.86 kB[22m[22m[2m │ gzip:   0.60 kB[22m
+[2mdist/[22m[2massets/[22m[35mSaveButton-Dc01Y2MA.css                                 [39m[1m[2m    2.86 kB[22m[22m[2m │ gzip:   0.61 kB[22m
+[2mdist/[22m[2massets/[22m[35mPageViewLayout-Cn6FD0Wt.css                             [39m[1m[2m    2.90 kB[22m[22m[2m │ gzip:   0.62 kB[22m
+[2mdist/[22m[2massets/[22m[35mErrorView-D2OMvGTk.css                                  [39m[1m[2m    2.93 kB[22m[22m[2m │ gzip:   0.62 kB[22m
+[2mdist/[22m[2massets/[22m[35mNodeCreation-CKa3G1zA.css                               [39m[1m[2m    2.93 kB[22m[22m[2m │ gzip:   0.65 kB[22m
+[2mdist/[22m[2massets/[22m[35mSelectedItemsInfo-DDbNnY7M.css                          [39m[1m[2m    2.96 kB[22m[22m[2m │ gzip:   0.64 kB[22m
+[2mdist/[22m[2massets/[22m[35mWorkflowExecutionsLandingPage-DMldlKod.css              [39m[1m[2m    2.97 kB[22m[22m[2m │ gzip:   0.63 kB[22m
+[2mdist/[22m[2massets/[22m[35mCredentialSelectorModal-CKQNdS8g.css                    [39m[1m[2m    3.05 kB[22m[22m[2m │ gzip:   0.63 kB[22m
+[2mdist/[22m[2massets/[22m[35mTemplatesCollectionView-klb8FT9y.css                    [39m[1m[2m    3.06 kB[22m[22m[2m │ gzip:   0.66 kB[22m
+[2mdist/[22m[2massets/[22m[35mSigninView-BQgsTN8o.css                                 [39m[1m[2m    3.07 kB[22m[22m[2m │ gzip:   0.68 kB[22m
+[2mdist/[22m[2massets/[22m[35mAgentEditorModal-Dupcj7sL.css                           [39m[1m[2m    3.09 kB[22m[22m[2m │ gzip:   0.67 kB[22m
+[2mdist/[22m[2massets/[22m[35mTemplateCard-DxDBlS6p.css                               [39m[1m[2m    3.10 kB[22m[22m[2m │ gzip:   0.67 kB[22m
+[2mdist/[22m[2massets/[22m[35mSetupWorkflowFromTemplateView-CU2iGJTa.css              [39m[1m[2m    3.10 kB[22m[22m[2m │ gzip:   0.68 kB[22m
+[2mdist/[22m[2massets/[22m[35mSettingsExternalSecrets-CaiOf7cD.css                    [39m[1m[2m    3.10 kB[22m[22m[2m │ gzip:   0.65 kB[22m
+[2mdist/[22m[2massets/[22m[35museCommandBar-eK4Fv9lH.css                              [39m[1m[2m    3.12 kB[22m[22m[2m │ gzip:   0.66 kB[22m
+[2mdist/[22m[2massets/[22m[35mWorkflowPreview-CYpzxJej.css                            [39m[1m[2m    3.17 kB[22m[22m[2m │ gzip:   0.72 kB[22m
+[2mdist/[22m[2massets/[22m[35mResourceFiltersDropdown-BACE5ZTX.css                    [39m[1m[2m    3.26 kB[22m[22m[2m │ gzip:   0.68 kB[22m
+[2mdist/[22m[2massets/[22m[35mSettingsLdapView-BuamZyhu.css                           [39m[1m[2m    3.26 kB[22m[22m[2m │ gzip:   0.70 kB[22m
+[2mdist/[22m[2massets/[22m[35mProjectBreadcrumb-CAEDvzuN.css                          [39m[1m[2m    3.27 kB[22m[22m[2m │ gzip:   0.71 kB[22m
+[2mdist/[22m[2massets/[22m[35mDataTableView-ByKnlVtU.css                              [39m[1m[2m    3.28 kB[22m[22m[2m │ gzip:   0.78 kB[22m
+[2mdist/[22m[2massets/[22m[35mTemplatesWorkflowView-CBjRBbmw.css                      [39m[1m[2m    3.29 kB[22m[22m[2m │ gzip:   0.74 kB[22m
+[2mdist/[22m[2massets/[22m[35mRunDataSearch-BvNE3iVy.css                              [39m[1m[2m    3.29 kB[22m[22m[2m │ gzip:   0.72 kB[22m
+[2mdist/[22m[2massets/[22m[35mWorkflowExecutionsInfoAccordion-CEOvJ-SX.css            [39m[1m[2m    3.32 kB[22m[22m[2m │ gzip:   0.74 kB[22m
+[2mdist/[22m[2massets/[22m[35mMainSidebarUserArea-yJKeCkOz.css                        [39m[1m[2m    3.33 kB[22m[22m[2m │ gzip:   0.70 kB[22m
+[2mdist/[22m[2massets/[22m[35mInsightsTableWorkflows-D20Yb7ZW.css                     [39m[1m[2m    3.35 kB[22m[22m[2m │ gzip:   0.77 kB[22m
+[2mdist/[22m[2massets/[22m[35mProviderSettingsModal-CZ44KI4I.css                      [39m[1m[2m    3.37 kB[22m[22m[2m │ gzip:   0.68 kB[22m
+[2mdist/[22m[2massets/[22m[35museTelemetryContext-BpnKRIT7.css                        [39m[1m[2m    3.38 kB[22m[22m[2m │ gzip:   0.74 kB[22m
+[2mdist/[22m[2massets/[22m[35mPrebuiltAgentTemplatesView-jF7HvWnL.css                 [39m[1m[2m    3.40 kB[22m[22m[2m │ gzip:   0.75 kB[22m
+[2mdist/[22m[2massets/[22m[35mProjectCardBadge-XPHWNQHG.css                           [39m[1m[2m    3.41 kB[22m[22m[2m │ gzip:   0.76 kB[22m
+[2mdist/[22m[2massets/[22m[35mProjectIcon-DT95ZcDW.css                                [39m[1m[2m    3.50 kB[22m[22m[2m │ gzip:   0.72 kB[22m
+[2mdist/[22m[2massets/[22m[35mSettingsPersonalView-DEpYU3TT.css                       [39m[1m[2m    3.50 kB[22m[22m[2m │ gzip:   0.82 kB[22m
+[2mdist/[22m[2massets/[22m[35mToolsSelectorModal-B2z9ibQ0.css                         [39m[1m[2m    3.63 kB[22m[22m[2m │ gzip:   0.73 kB[22m
+[2mdist/[22m[2massets/[22m[35mChatFile-DMzpEB1j.css                                   [39m[1m[2m    3.63 kB[22m[22m[2m │ gzip:   0.85 kB[22m
+[2mdist/[22m[2massets/[22m[35mCopyInput-BiDmlr9B.css                                  [39m[1m[2m    3.84 kB[22m[22m[2m │ gzip:   0.90 kB[22m
+[2mdist/[22m[2massets/[22m[35mRunDataParsedAiContent-CvjNCtpG.css                     [39m[1m[2m    3.95 kB[22m[22m[2m │ gzip:   0.75 kB[22m
+[2mdist/[22m[2massets/[22m[35mevaluation-CGxdCHrN.css                                 [39m[1m[2m    4.12 kB[22m[22m[2m │ gzip:   0.92 kB[22m
+[2mdist/[22m[2massets/[22m[35mSettingsSourceControl-DEs9MNB6.css                      [39m[1m[2m    4.19 kB[22m[22m[2m │ gzip:   0.92 kB[22m
+[2mdist/[22m[2massets/[22m[35mOAuthConsentView-CXZbBKS5.css                           [39m[1m[2m    4.44 kB[22m[22m[2m │ gzip:   0.95 kB[22m
+[2mdist/[22m[2massets/[22m[35mTagsDropdown-Do1UB2LF.css                               [39m[1m[2m    4.95 kB[22m[22m[2m │ gzip:   1.12 kB[22m
+[2mdist/[22m[2massets/[22m[35mFixedCollectionParameter-BLkaFn--.css                   [39m[1m[2m    5.10 kB[22m[22m[2m │ gzip:   0.96 kB[22m
+[2mdist/[22m[2massets/[22m[35mInsightsDashboard-CttFeZVb.css                          [39m[1m[2m    5.35 kB[22m[22m[2m │ gzip:   1.39 kB[22m
+[2mdist/[22m[2massets/[22m[35mTemplateDetails-DfyKyMyy.css                            [39m[1m[2m    5.40 kB[22m[22m[2m │ gzip:   0.65 kB[22m
+[2mdist/[22m[2massets/[22m[35mbanners-UK5wWFEI.css                                    [39m[1m[2m    5.44 kB[22m[22m[2m │ gzip:   0.67 kB[22m
+[2mdist/[22m[2massets/[22m[35mCommunityNodeUpdateInfo-kPDiipF5.css                    [39m[1m[2m    5.52 kB[22m[22m[2m │ gzip:   0.69 kB[22m
+[2mdist/[22m[2massets/[22m[35mrouter-zBt63VWY.css                                     [39m[1m[2m    5.72 kB[22m[22m[2m │ gzip:   0.75 kB[22m
+[2mdist/[22m[2massets/[22m[35mAuthView-Dg9ZkCud.css                                   [39m[1m[2m    5.80 kB[22m[22m[2m │ gzip:   0.80 kB[22m
+[2mdist/[22m[2massets/[22m[35mModal-DNkRJkUt.css                                      [39m[1m[2m    5.90 kB[22m[22m[2m │ gzip:   0.81 kB[22m
+[2mdist/[22m[2massets/[22m[35mTemplatesView-iSPzXjQB.css                              [39m[1m[2m    5.92 kB[22m[22m[2m │ gzip:   0.82 kB[22m
+[2mdist/[22m[2massets/[22m[35mSettingsView-6sirGv9l.css                               [39m[1m[2m    6.01 kB[22m[22m[2m │ gzip:   0.85 kB[22m
+[2mdist/[22m[2massets/[22m[35mSettingsLogStreamingView-xo-rTSA0.css                   [39m[1m[2m    6.02 kB[22m[22m[2m │ gzip:   0.91 kB[22m
+[2mdist/[22m[2massets/[22m[35mCredentialsView-BDOl2A0w.css                            [39m[1m[2m    6.03 kB[22m[22m[2m │ gzip:   0.90 kB[22m
+[2mdist/[22m[2massets/[22m[35mToolsSelector-Dh6tXr5w.css                              [39m[1m[2m    6.12 kB[22m[22m[2m │ gzip:   0.92 kB[22m
+[2mdist/[22m[2massets/[22m[35mInsightsSummary-CnaRV949.css                            [39m[1m[2m    6.17 kB[22m[22m[2m │ gzip:   1.35 kB[22m
+[2mdist/[22m[2massets/[22m[35mProjectSharing-DsD3YT5P.css                             [39m[1m[2m    6.18 kB[22m[22m[2m │ gzip:   0.86 kB[22m
+[2mdist/[22m[2massets/[22m[35mCredentialPicker-CUNAJHH6.css                           [39m[1m[2m    6.25 kB[22m[22m[2m │ gzip:   0.97 kB[22m
+[2mdist/[22m[2massets/[22m[35mAddDataTableModal-CZuODwEx.css                          [39m[1m[2m    6.36 kB[22m[22m[2m │ gzip:   1.30 kB[22m
+[2mdist/[22m[2massets/[22m[35mProjectHeader-DMoL829v.css                              [39m[1m[2m    6.43 kB[22m[22m[2m │ gzip:   1.00 kB[22m
+[2mdist/[22m[2massets/[22m[35mSettingsCommunityNodesView-m7kLUpJK.css                 [39m[1m[2m    6.49 kB[22m[22m[2m │ gzip:   0.98 kB[22m
+[2mdist/[22m[2massets/[22m[35mSettingsApiView-Dtl_N9mK.css                            [39m[1m[2m    6.64 kB[22m[22m[2m │ gzip:   1.05 kB[22m
+[2mdist/[22m[2massets/[22m[35mChatAgentsView-bU9DF47q.css                             [39m[1m[2m    7.11 kB[22m[22m[2m │ gzip:   1.15 kB[22m
+[2mdist/[22m[2massets/[22m[35mRunDataJson-LufoUTRy.css                                [39m[1m[2m    7.26 kB[22m[22m[2m │ gzip:   1.10 kB[22m
+[2mdist/[22m[2massets/[22m[35mAlert-BA2uuWjw.css                                      [39m[1m[2m    7.28 kB[22m[22m[2m │ gzip:   1.11 kB[22m
+[2mdist/[22m[2massets/[22m[35mRunDataTable-HBCyaP8o.css                               [39m[1m[2m    7.72 kB[22m[22m[2m │ gzip:   1.68 kB[22m
+[2mdist/[22m[2massets/[22m[35mWorkflowActivator-DSgMORP6.css                          [39m[1m[2m    8.03 kB[22m[22m[2m │ gzip:   0.78 kB[22m
+[2mdist/[22m[2massets/[22m[35mSetupTemplateFormStep-n3VY06cx.css                      [39m[1m[2m    8.25 kB[22m[22m[2m │ gzip:   0.83 kB[22m
+[2mdist/[22m[2massets/[22m[35mNodeDetailsViewV2-UDZPnGp5.css                          [39m[1m[2m    8.25 kB[22m[22m[2m │ gzip:   1.45 kB[22m
+[2mdist/[22m[2massets/[22m[35mTestRunDetailView-CVGty0j0.css                          [39m[1m[2m    8.39 kB[22m[22m[2m │ gzip:   1.49 kB[22m
+[2mdist/[22m[2massets/[22m[35mProjectVariables-CVX3Lygi.css                           [39m[1m[2m    8.87 kB[22m[22m[2m │ gzip:   1.06 kB[22m
+[2mdist/[22m[2massets/[22m[35mSettingsUsersView-CfJcVjkl.css                          [39m[1m[2m    9.32 kB[22m[22m[2m │ gzip:   1.15 kB[22m
+[2mdist/[22m[2massets/[22m[35mProjectSettings-vir6puPd.css                            [39m[1m[2m    9.72 kB[22m[22m[2m │ gzip:   1.17 kB[22m
+[2mdist/[22m[2massets/[22m[35mSettingsUsageAndPlan-DtlseKWr.css                       [39m[1m[2m    9.83 kB[22m[22m[2m │ gzip:   1.22 kB[22m
+[2mdist/[22m[2massets/[22m[35mExecutionsTime-BpajgDjV.css                             [39m[1m[2m    9.95 kB[22m[22m[2m │ gzip:   1.25 kB[22m
+[2mdist/[22m[2massets/[22m[35mTemplateList-CNUtq0N7.css                               [39m[1m[2m   10.03 kB[22m[22m[2m │ gzip:   1.21 kB[22m
+[2mdist/[22m[2massets/[22m[35mVirtualSchema-BbtSmmYz.css                              [39m[1m[2m   10.14 kB[22m[22m[2m │ gzip:   2.23 kB[22m
+[2mdist/[22m[2massets/[22m[35mResourcesListLayout-B5k0oRW7.css                        [39m[1m[2m   10.30 kB[22m[22m[2m │ gzip:   1.32 kB[22m
+[2mdist/[22m[2massets/[22m[35mExecutionsView-DP5OXlS4.css                             [39m[1m[2m   11.05 kB[22m[22m[2m │ gzip:   1.05 kB[22m
+[2mdist/[22m[2massets/[22m[35mSettingsSso-DPkEVc10.css                                [39m[1m[2m   11.98 kB[22m[22m[2m │ gzip:   1.16 kB[22m
+[2mdist/[22m[2massets/[22m[35mEvaluationsView-CmcDUAS_.css                            [39m[1m[2m   12.06 kB[22m[22m[2m │ gzip:   1.28 kB[22m
+[2mdist/[22m[2massets/[22m[35mEvaluationsRootView-D22182Fd.css                        [39m[1m[2m   12.34 kB[22m[22m[2m │ gzip:   1.30 kB[22m
+[2mdist/[22m[2massets/[22m[35museLogsTreeExpand-nZMKe2ps.css                          [39m[1m[2m   12.61 kB[22m[22m[2m │ gzip:   1.84 kB[22m
+[2mdist/[22m[2massets/[22m[35mChatSidebar-plErV6K1.css                                [39m[1m[2m   13.20 kB[22m[22m[2m │ gzip:   1.51 kB[22m
+[2mdist/[22m[2massets/[22m[35mNodeDetailsView-Dy4A-9xj.css                            [39m[1m[2m   13.82 kB[22m[22m[2m │ gzip:   1.64 kB[22m
+[2mdist/[22m[2massets/[22m[35mWorkflowHistory-BmerBiKz.css                            [39m[1m[2m   14.41 kB[22m[22m[2m │ gzip:   1.59 kB[22m
+[2mdist/[22m[2massets/[22m[35mWorkflowExecutionsPreview-BkXT82z5.css                  [39m[1m[2m   15.45 kB[22m[22m[2m │ gzip:   1.94 kB[22m
+[2mdist/[22m[2massets/[22m[35mWorkflowExecutionsView-J4lWGYW8.css                     [39m[1m[2m   16.60 kB[22m[22m[2m │ gzip:   1.85 kB[22m
+[2mdist/[22m[2massets/[22m[35mNodeView-CnbgHMAv.css                                   [39m[1m[2m   18.76 kB[22m[22m[2m │ gzip:   2.07 kB[22m
+[2mdist/[22m[2massets/[22m[35mTemplatesSearchView-BfT0LMil.css                        [39m[1m[2m   19.49 kB[22m[22m[2m │ gzip:   1.94 kB[22m
+[2mdist/[22m[2massets/[22m[35mWorkerView-4m_NaoAx.css                                 [39m[1m[2m   20.16 kB[22m[22m[2m │ gzip:   1.38 kB[22m
+[2mdist/[22m[2massets/[22m[35mMainHeader-BgS_7Hqu.css                                 [39m[1m[2m   22.97 kB[22m[22m[2m │ gzip:   2.03 kB[22m
+[2mdist/[22m[2massets/[22m[35mMainSidebar-Cxu_1AUX.css                                [39m[1m[2m   23.03 kB[22m[22m[2m │ gzip:   2.07 kB[22m
+[2mdist/[22m[2massets/[22m[35mTriggerPanel-BjsM2DGf.css                               [39m[1m[2m   25.58 kB[22m[22m[2m │ gzip:   2.65 kB[22m
+[2mdist/[22m[2massets/[22m[35mSettingsMCPView-BL9rkSWq.css                            [39m[1m[2m   26.77 kB[22m[22m[2m │ gzip:   1.99 kB[22m
+[2mdist/[22m[2massets/[22m[35mChatView-EoD-ZXIL.css                                   [39m[1m[2m   28.50 kB[22m[22m[2m │ gzip:   3.18 kB[22m
+[2mdist/[22m[2massets/[22m[35mDataTableDetailsView-BmITjGF6.css                       [39m[1m[2m   29.82 kB[22m[22m[2m │ gzip:   2.70 kB[22m
+[2mdist/[22m[2massets/[22m[35mNodeCreator-JpUhf2LN.css                                [39m[1m[2m   36.26 kB[22m[22m[2m │ gzip:   3.17 kB[22m
+[2mdist/[22m[2massets/[22m[35mItemsRenderer-Cr6c6uYy.css                              [39m[1m[2m   39.12 kB[22m[22m[2m │ gzip:   2.46 kB[22m
+[2mdist/[22m[2massets/[22m[35mNodeSettings-G-y4BNzt.css                               [39m[1m[2m   39.98 kB[22m[22m[2m │ gzip:   3.68 kB[22m
+[2mdist/[22m[2massets/[22m[35mWorkflowsView-CLgqCjRp.css                              [39m[1m[2m   40.33 kB[22m[22m[2m │ gzip:   3.05 kB[22m
+[2mdist/[22m[2massets/[22m[35misEmpty-BaVr_6yu.css                                    [39m[1m[2m   48.37 kB[22m[22m[2m │ gzip:   4.09 kB[22m
+[2mdist/[22m[2massets/[22m[35mLogsPanel-xSodDRmo.css                                  [39m[1m[2m   74.30 kB[22m[22m[2m │ gzip:   5.55 kB[22m
+[2mdist/[22m[2massets/[22m[35museCanvasMapping-NNxQMzFq.css                           [39m[1m[2m  110.98 kB[22m[22m[2m │ gzip:   6.71 kB[22m
+[2mdist/[22m[2massets/[22m[35mParameterInputList-TPvfhJkn.css                         [39m[1m[2m  179.43 kB[22m[22m[2m │ gzip:  11.94 kB[22m
+[2mdist/[22m[2massets/[22m[35msrc-D76UnH0P.css                                        [39m[1m[2m  388.39 kB[22m[22m[2m │ gzip:  26.36 kB[22m
+[2mdist/[22m[2massets/[22m[35mindex-D3YAutYo.css                                      [39m[1m[2m  673.13 kB[22m[22m[2m │ gzip:  65.83 kB[22m
+[2mdist/[22m[2massets/[22m[36men-BD3FHSTF.js                                          [39m[1m[2m    0.08 kB[22m[22m[2m │ gzip:   0.08 kB[22m
+[2mdist/[22m[2massets/[22m[36msourceControl.eventBus-gAsGusR1.js                      [39m[1m[2m    0.14 kB[22m[22m[2m │ gzip:   0.12 kB[22m
+[2mdist/[22m[2massets/[22m[36mcore-DNyEixOf.js                                        [39m[1m[2m    0.20 kB[22m[22m[2m │ gzip:   0.16 kB[22m
+[2mdist/[22m[2massets/[22m[36m_plugin-vue_export-helper-BwBpWJRZ.js                   [39m[1m[2m    0.22 kB[22m[22m[2m │ gzip:   0.16 kB[22m
+[2mdist/[22m[2massets/[22m[36msmartDecimal-Bnk1P3MO.js                                [39m[1m[2m    0.23 kB[22m[22m[2m │ gzip:   0.17 kB[22m
+[2mdist/[22m[2massets/[22m[36mauth.eventBus-zAUvfR7m.js                               [39m[1m[2m    0.27 kB[22m[22m[2m │ gzip:   0.15 kB[22m
+[2mdist/[22m[2massets/[22m[36msortByProperty-DeupcrDk.js                              [39m[1m[2m    0.28 kB[22m[22m[2m │ gzip:   0.20 kB[22m
+[2mdist/[22m[2massets/[22m[36mmcp.constants-BEZmLv14.js                               [39m[1m[2m    0.29 kB[22m[22m[2m │ gzip:   0.20 kB[22m
+[2mdist/[22m[2massets/[22m[36mRunDataHtml-DR2br--H.js                                 [39m[1m[2m    0.31 kB[22m[22m[2m │ gzip:   0.21 kB[22m
+[2mdist/[22m[2massets/[22m[36muniqBy-Clqs03vS.js                                      [39m[1m[2m    0.49 kB[22m[22m[2m │ gzip:   0.29 kB[22m
+[2mdist/[22m[2massets/[22m[36mfileUtils-BIVczUdz.js                                   [39m[1m[2m    0.60 kB[22m[22m[2m │ gzip:   0.35 kB[22m
+[2mdist/[22m[2massets/[22m[36mretry-CalJieID.js                                       [39m[1m[2m    0.68 kB[22m[22m[2m │ gzip:   0.35 kB[22m
+[2mdist/[22m[2massets/[22m[36morderBy-8eVtgJMA.js                                     [39m[1m[2m    0.73 kB[22m[22m[2m │ gzip:   0.36 kB[22m
+[2mdist/[22m[2massets/[22m[36museIntersectionObserver-DX3d3xXy.js                     [39m[1m[2m    0.77 kB[22m[22m[2m │ gzip:   0.36 kB[22m
+[2mdist/[22m[2massets/[22m[36museStyles-DhM0cpS7.js                                   [39m[1m[2m    0.84 kB[22m[22m[2m │ gzip:   0.50 kB[22m
+[2mdist/[22m[2massets/[22m[36mpickBy-lWUHy3vr.js                                      [39m[1m[2m    0.84 kB[22m[22m[2m │ gzip:   0.40 kB[22m
+[2mdist/[22m[2massets/[22m[36mVueMarkdown-B18xWgg2.js                                 [39m[1m[2m    0.85 kB[22m[22m[2m │ gzip:   0.45 kB[22m
+[2mdist/[22m[2massets/[22m[36mEnterpriseEdition.ee-B6jNDPdh.js                        [39m[1m[2m    0.86 kB[22m[22m[2m │ gzip:   0.47 kB[22m
+[2mdist/[22m[2massets/[22m[36museExecutionData-BUqCoIf3.js                            [39m[1m[2m    0.89 kB[22m[22m[2m │ gzip:   0.40 kB[22m
+[2mdist/[22m[2massets/[22m[36museExternalHooks-BJ7FU4cB.js                            [39m[1m[2m    0.93 kB[22m[22m[2m │ gzip:   0.45 kB[22m
+[2mdist/[22m[2massets/[22m[36mPageViewLayout-DM7e7tnO.js                              [39m[1m[2m    0.95 kB[22m[22m[2m │ gzip:   0.46 kB[22m
+[2mdist/[22m[2massets/[22m[36mRunDataParsedAiContent-CTfCHcFv.js                      [39m[1m[2m    1.07 kB[22m[22m[2m │ gzip:   0.52 kB[22m
+[2mdist/[22m[2massets/[22m[36museMcp-CKyc2hj1.js                                      [39m[1m[2m    1.07 kB[22m[22m[2m │ gzip:   0.48 kB[22m
+[2mdist/[22m[2massets/[22m[36muserRoleProvisioning.store-BORCPrfN.js                  [39m[1m[2m    1.25 kB[22m[22m[2m │ gzip:   0.45 kB[22m
+[2mdist/[22m[2massets/[22m[36mSignoutView-B8wTRB0q.js                                 [39m[1m[2m    1.32 kB[22m[22m[2m │ gzip:   0.68 kB[22m
+[2mdist/[22m[2massets/[22m[36museBeforeUnload-0RBioyXx.js                             [39m[1m[2m    1.35 kB[22m[22m[2m │ gzip:   0.59 kB[22m
+[2mdist/[22m[2massets/[22m[36mconstants-D2fYduVh.js                                   [39m[1m[2m    1.35 kB[22m[22m[2m │ gzip:   0.59 kB[22m
+[2mdist/[22m[2massets/[22m[36mRunDataHtml-C869KLeL.js                                 [39m[1m[2m    1.43 kB[22m[22m[2m │ gzip:   0.68 kB[22m
+[2mdist/[22m[2massets/[22m[36museChatHubSidebarState-DOUfFuHm.js                      [39m[1m[2m    1.46 kB[22m[22m[2m │ gzip:   0.64 kB[22m
+[2mdist/[22m[2massets/[22m[36mEmptySharedSectionActionBox-DYdQyt9R.js                 [39m[1m[2m    1.49 kB[22m[22m[2m │ gzip:   0.75 kB[22m
+[2mdist/[22m[2massets/[22m[36museClipboard-CCdCf-J0.js                                [39m[1m[2m    1.52 kB[22m[22m[2m │ gzip:   0.70 kB[22m
+[2mdist/[22m[2massets/[22m[36museTelemetryContext-CmP9AFRg.js                         [39m[1m[2m    1.60 kB[22m[22m[2m │ gzip:   0.71 kB[22m
+[2mdist/[22m[2massets/[22m[36mAnimatedSpinner-BKvs0-tV.js                             [39m[1m[2m    1.69 kB[22m[22m[2m │ gzip:   0.62 kB[22m
+[2mdist/[22m[2massets/[22m[36mVirtualSchema-BGMWadAS.js                               [39m[1m[2m    1.75 kB[22m[22m[2m │ gzip:   0.80 kB[22m
+[2mdist/[22m[2massets/[22m[36mInsightsChartFailed-CYjFK7iu.js                         [39m[1m[2m    1.80 kB[22m[22m[2m │ gzip:   0.86 kB[22m
+[2mdist/[22m[2massets/[22m[36mPushConnectionTracker-Dj4xmGjA.js                       [39m[1m[2m    1.80 kB[22m[22m[2m │ gzip:   0.82 kB[22m
+[2mdist/[22m[2massets/[22m[36mchunk-6z4oVpB-.js                                       [39m[1m[2m    1.87 kB[22m[22m[2m │ gzip:   0.83 kB[22m
+[2mdist/[22m[2massets/[22m[36mKeyboardShortcutTooltip-BIZuRkPu.js                     [39m[1m[2m    1.92 kB[22m[22m[2m │ gzip:   0.78 kB[22m
+[2mdist/[22m[2massets/[22m[36mapiKeys.store-t6LMmbJg.js                               [39m[1m[2m    1.94 kB[22m[22m[2m │ gzip:   0.69 kB[22m
+[2mdist/[22m[2massets/[22m[36mInsightsChartTotal-vt_NU5YM.js                          [39m[1m[2m    1.96 kB[22m[22m[2m │ gzip:   0.88 kB[22m
+[2mdist/[22m[2massets/[22m[36mdateFormatter-C6mvCDlO.js                               [39m[1m[2m    1.98 kB[22m[22m[2m │ gzip:   0.68 kB[22m
+[2mdist/[22m[2massets/[22m[36minsights.constants-BoP_B6zb.js                          [39m[1m[2m    2.00 kB[22m[22m[2m │ gzip:   0.72 kB[22m
+[2mdist/[22m[2massets/[22m[36mSeverityTag-XwDFGdAj.js                                 [39m[1m[2m    2.06 kB[22m[22m[2m │ gzip:   0.88 kB[22m
+[2mdist/[22m[2massets/[22m[36mInsightsChartFailureRate-BgXy9TxD.js                    [39m[1m[2m    2.07 kB[22m[22m[2m │ gzip:   0.96 kB[22m
+[2mdist/[22m[2massets/[22m[36mWorkflowTagsDropdown-BvYFy5vm.js                        [39m[1m[2m    2.10 kB[22m[22m[2m │ gzip:   0.86 kB[22m
+[2mdist/[22m[2massets/[22m[36mpreload-helper-CR0ecmWK.js                              [39m[1m[2m    2.13 kB[22m[22m[2m │ gzip:   1.00 kB[22m
+[2mdist/[22m[2massets/[22m[36mtemplateTransforms-BkHgB6U7.js                          [39m[1m[2m    2.15 kB[22m[22m[2m │ gzip:   0.64 kB[22m
+[2mdist/[22m[2massets/[22m[36mroles.store-khT2JuxJ.js                                 [39m[1m[2m    2.16 kB[22m[22m[2m │ gzip:   0.73 kB[22m
+[2mdist/[22m[2massets/[22m[36mAnnotationTagsDropdown.ee-BFmxAFbN.js                   [39m[1m[2m    2.16 kB[22m[22m[2m │ gzip:   0.88 kB[22m
+[2mdist/[22m[2massets/[22m[36mInsightsChartAverageRuntime-fKk8sxLZ.js                 [39m[1m[2m    2.28 kB[22m[22m[2m │ gzip:   1.04 kB[22m
+[2mdist/[22m[2massets/[22m[36musePageRedirectionHelper-r6l_bRFU.js                    [39m[1m[2m    2.29 kB[22m[22m[2m │ gzip:   0.79 kB[22m
+[2mdist/[22m[2massets/[22m[36mLogsPanel-C8CJj9di.js                                   [39m[1m[2m    2.33 kB[22m[22m[2m │ gzip:   1.03 kB[22m
+[2mdist/[22m[2massets/[22m[36mCollectionParameter-DSv3tzU1.js                         [39m[1m[2m    2.36 kB[22m[22m[2m │ gzip:   1.05 kB[22m
+[2mdist/[22m[2massets/[22m[36mInsightsChartTimeSaved-DxAralpa.js                      [39m[1m[2m    2.37 kB[22m[22m[2m │ gzip:   1.10 kB[22m
+[2mdist/[22m[2massets/[22m[36mWorkflowOnboardingView-T8D1OLYR.js                      [39m[1m[2m    2.43 kB[22m[22m[2m │ gzip:   0.97 kB[22m
+[2mdist/[22m[2massets/[22m[36mnodeTransforms-BVrJi3b-.js                              [39m[1m[2m    2.46 kB[22m[22m[2m │ gzip:   0.78 kB[22m
+[2mdist/[22m[2massets/[22m[36mProjectIcon-CDn-mPKP.js                                 [39m[1m[2m    2.49 kB[22m[22m[2m │ gzip:   1.01 kB[22m
+[2mdist/[22m[2massets/[22m[36mChatAgentAvatar-Byp7RttV.js                             [39m[1m[2m    2.54 kB[22m[22m[2m │ gzip:   1.01 kB[22m
+[2mdist/[22m[2massets/[22m[36mSelectedItemsInfo-ChKgfiAR.js                           [39m[1m[2m    2.56 kB[22m[22m[2m │ gzip:   0.94 kB[22m
+[2mdist/[22m[2massets/[22m[36mSamlOnboarding-BHx-7jl7.js                              [39m[1m[2m    2.69 kB[22m[22m[2m │ gzip:   1.18 kB[22m
+[2mdist/[22m[2massets/[22m[36mSetupWorkflowCredentialsButton-BoQgomho.js              [39m[1m[2m    2.79 kB[22m[22m[2m │ gzip:   1.17 kB[22m
+[2mdist/[22m[2massets/[22m[36museKeybindings-BmIElHdM.js                              [39m[1m[2m    2.84 kB[22m[22m[2m │ gzip:   1.15 kB[22m
+[2mdist/[22m[2massets/[22m[36mErrorView-Cgno6Chj.js                                   [39m[1m[2m    2.87 kB[22m[22m[2m │ gzip:   1.15 kB[22m
+[2mdist/[22m[2massets/[22m[36mDemoFooter-Cd2kieG1.js                                  [39m[1m[2m    2.89 kB[22m[22m[2m │ gzip:   1.32 kB[22m
+[2mdist/[22m[2massets/[22m[36mInsightsPaywall-BRKFcdh0.js                             [39m[1m[2m    2.95 kB[22m[22m[2m │ gzip:   1.15 kB[22m
+[2mdist/[22m[2massets/[22m[36mEntityUnAuthorised-BxNmahqZ.js                          [39m[1m[2m    2.98 kB[22m[22m[2m │ gzip:   1.25 kB[22m
+[2mdist/[22m[2massets/[22m[36mTemplatesView-C8CkazbO.js                               [39m[1m[2m    2.98 kB[22m[22m[2m │ gzip:   0.99 kB[22m
+[2mdist/[22m[2massets/[22m[36mtemplateActions-G5tyIxKN.js                             [39m[1m[2m    3.02 kB[22m[22m[2m │ gzip:   1.02 kB[22m
+[2mdist/[22m[2massets/[22m[36mNodeIcon-DYAvPQ_l.js                                    [39m[1m[2m    3.03 kB[22m[22m[2m │ gzip:   1.05 kB[22m
+[2mdist/[22m[2massets/[22m[36mTextWithHighlights-bwDYVgOs.js                          [39m[1m[2m    3.03 kB[22m[22m[2m │ gzip:   1.11 kB[22m
+[2mdist/[22m[2massets/[22m[36minsights.store-CYMecTR8.js                              [39m[1m[2m    3.03 kB[22m[22m[2m │ gzip:   0.91 kB[22m
+[2mdist/[22m[2massets/[22m[36mCopyInput-C3LOTc_R.js                                   [39m[1m[2m    3.13 kB[22m[22m[2m │ gzip:   1.20 kB[22m
+[2mdist/[22m[2massets/[22m[36mEntityNotFound-C3IDzI1O.js                              [39m[1m[2m    3.18 kB[22m[22m[2m │ gzip:   1.16 kB[22m
+[2mdist/[22m[2massets/[22m[36mSaveButton-CwTz9uoy.js                                  [39m[1m[2m    3.20 kB[22m[22m[2m │ gzip:   1.13 kB[22m
+[2mdist/[22m[2massets/[22m[36mCredentialIcon-BCNKx1Fa.js                              [39m[1m[2m    3.23 kB[22m[22m[2m │ gzip:   1.14 kB[22m
+[2mdist/[22m[2massets/[22m[36museExecutionHelpers-Uk543mgj.js                         [39m[1m[2m    3.24 kB[22m[22m[2m │ gzip:   1.07 kB[22m
+[2mdist/[22m[2massets/[22m[36mForgotMyPasswordView-DJ53TVRa.js                        [39m[1m[2m    3.54 kB[22m[22m[2m │ gzip:   1.43 kB[22m
+[2mdist/[22m[2massets/[22m[36mSetupView-CdQuIOXU.js                                   [39m[1m[2m    3.55 kB[22m[22m[2m │ gzip:   1.37 kB[22m
+[2mdist/[22m[2massets/[22m[36mDataTableActions-DVTII2am.js                            [39m[1m[2m    3.62 kB[22m[22m[2m │ gzip:   1.23 kB[22m
+[2mdist/[22m[2massets/[22m[36mmcp.store-D_u_DtlZ.js                                   [39m[1m[2m    3.68 kB[22m[22m[2m │ gzip:   1.12 kB[22m
+[2mdist/[22m[2massets/[22m[36mProjectBreadcrumb-DRkiZNot.js                           [39m[1m[2m    3.69 kB[22m[22m[2m │ gzip:   1.30 kB[22m
+[2mdist/[22m[2massets/[22m[36mschemaPreview.store-DYiC5rLO.js                         [39m[1m[2m    3.76 kB[22m[22m[2m │ gzip:   1.45 kB[22m
+[2mdist/[22m[2massets/[22m[36m_initCloneObject-BFxVvMGk.js                            [39m[1m[2m    3.77 kB[22m[22m[2m │ gzip:   1.17 kB[22m
+[2mdist/[22m[2massets/[22m[36mFileSaver.min-BZ3jw69B.js                               [39m[1m[2m    3.82 kB[22m[22m[2m │ gzip:   1.59 kB[22m
+[2mdist/[22m[2massets/[22m[36mnpsSurvey.store-bwxDVVop.js                             [39m[1m[2m    3.88 kB[22m[22m[2m │ gzip:   1.09 kB[22m
+[2mdist/[22m[2massets/[22m[36museWorkflowActivate-DB0n-5hn.js                         [39m[1m[2m    3.98 kB[22m[22m[2m │ gzip:   1.26 kB[22m
+[2mdist/[22m[2massets/[22m[36minsights.utils-Bgo6XuCx.js                              [39m[1m[2m    4.12 kB[22m[22m[2m │ gzip:   1.30 kB[22m
+[2mdist/[22m[2massets/[22m[36musage.store-B08lAl3a.js                                 [39m[1m[2m    4.12 kB[22m[22m[2m │ gzip:   1.25 kB[22m
+[2mdist/[22m[2massets/[22m[36mAlert-o0ezei7k.js                                       [39m[1m[2m    4.16 kB[22m[22m[2m │ gzip:   1.33 kB[22m
+[2mdist/[22m[2massets/[22m[36mexternalSecrets.ee.store-BD8Cia91.js                    [39m[1m[2m    4.23 kB[22m[22m[2m │ gzip:   1.27 kB[22m
+[2mdist/[22m[2massets/[22m[36mnodeIcon-Dj3XVsnM.js                                    [39m[1m[2m    4.24 kB[22m[22m[2m │ gzip:   1.28 kB[22m
+[2mdist/[22m[2massets/[22m[36mchartjs.utils-BRnsi51l.js                               [39m[1m[2m    4.29 kB[22m[22m[2m │ gzip:   1.05 kB[22m
+[2mdist/[22m[2massets/[22m[36mTimeAgo-CYvKY5Ya.js                                     [39m[1m[2m    4.30 kB[22m[22m[2m │ gzip:   1.64 kB[22m
+[2mdist/[22m[2massets/[22m[36mMainSidebarUserArea-Dz-cEINu.js                         [39m[1m[2m    4.35 kB[22m[22m[2m │ gzip:   1.56 kB[22m
+[2mdist/[22m[2massets/[22m[36mchatPanel.store-CC-XhVoE.js                             [39m[1m[2m    4.39 kB[22m[22m[2m │ gzip:   1.30 kB[22m
+[2mdist/[22m[2massets/[22m[36mcol-OpLlOm0k.js                                         [39m[1m[2m    4.40 kB[22m[22m[2m │ gzip:   1.37 kB[22m
+[2mdist/[22m[2massets/[22m[36mDraggable-C_w5PtwM.js                                   [39m[1m[2m    4.53 kB[22m[22m[2m │ gzip:   1.51 kB[22m
+[2mdist/[22m[2massets/[22m[36mSignupView-ipWocLwL.js                                  [39m[1m[2m    4.55 kB[22m[22m[2m │ gzip:   1.67 kB[22m
+[2mdist/[22m[2massets/[22m[36mAuthView-C4yBrYs4.js                                    [39m[1m[2m    4.58 kB[22m[22m[2m │ gzip:   1.56 kB[22m
+[2mdist/[22m[2massets/[22m[36mdist-BbucLhyg.js                                        [39m[1m[2m    4.60 kB[22m[22m[2m │ gzip:   1.52 kB[22m
+[2mdist/[22m[2massets/[22m[36museRecentResources-Ci_bvJZW.js                          [39m[1m[2m    4.68 kB[22m[22m[2m │ gzip:   1.54 kB[22m
+[2mdist/[22m[2massets/[22m[36mTemplateCard-rpnCp3fQ.js                                [39m[1m[2m    4.79 kB[22m[22m[2m │ gzip:   1.80 kB[22m
+[2mdist/[22m[2massets/[22m[36mChatFile-BbL40HHy.js                                    [39m[1m[2m    4.84 kB[22m[22m[2m │ gzip:   1.48 kB[22m
+[2mdist/[22m[2massets/[22m[36men-b3uD8cvU.js                                          [39m[1m[2m    4.88 kB[22m[22m[2m │ gzip:   1.76 kB[22m
+[2mdist/[22m[2massets/[22m[36museExecutionDebugging-BZeO1wOF.js                       [39m[1m[2m    4.89 kB[22m[22m[2m │ gzip:   1.72 kB[22m
+[2mdist/[22m[2massets/[22m[36mChangePasswordView-BnOQpILe.js                          [39m[1m[2m    5.02 kB[22m[22m[2m │ gzip:   1.78 kB[22m
+[2mdist/[22m[2massets/[22m[36mWorkflowExecutionsLandingPage-DO-drpr5.js               [39m[1m[2m    5.02 kB[22m[22m[2m │ gzip:   1.75 kB[22m
+[2mdist/[22m[2massets/[22m[36mModelByIdSelectorModal-CJr32R3u.js                      [39m[1m[2m    5.06 kB[22m[22m[2m │ gzip:   1.79 kB[22m
+[2mdist/[22m[2massets/[22m[36mdateformat-CMLc6OKJ.js                                  [39m[1m[2m    5.28 kB[22m[22m[2m │ gzip:   1.98 kB[22m
+[2mdist/[22m[2massets/[22m[36museWorkflowsCache-CDsveBfR.js                           [39m[1m[2m    5.30 kB[22m[22m[2m │ gzip:   1.44 kB[22m
+[2mdist/[22m[2massets/[22m[36msso.store-DvPf0-9P.js                                   [39m[1m[2m    5.52 kB[22m[22m[2m │ gzip:   1.35 kB[22m
+[2mdist/[22m[2massets/[22m[36museDebounce-CNmr8Xz1.js                                 [39m[1m[2m    5.60 kB[22m[22m[2m │ gzip:   1.76 kB[22m
+[2mdist/[22m[2massets/[22m[36mRunDataSearch-CJ3AqLxt.js                               [39m[1m[2m    5.60 kB[22m[22m[2m │ gzip:   2.05 kB[22m
+[2mdist/[22m[2massets/[22m[36mChatSidebarOpener-DSuMyfWu.js                           [39m[1m[2m    5.72 kB[22m[22m[2m │ gzip:   2.18 kB[22m
+[2mdist/[22m[2massets/[22m[36moverlay-BGICqPBA.js                                     [39m[1m[2m    5.73 kB[22m[22m[2m │ gzip:   1.96 kB[22m
+[2mdist/[22m[2massets/[22m[36mcloudPlan.store-2w2-vl1W.js                             [39m[1m[2m    6.46 kB[22m[22m[2m │ gzip:   2.02 kB[22m
+[2mdist/[22m[2massets/[22m[36mTemplateDetails-2-PuRBXr.js                             [39m[1m[2m    6.58 kB[22m[22m[2m │ gzip:   1.82 kB[22m
+[2mdist/[22m[2massets/[22m[36mResourceFiltersDropdown-DT3VYMvt.js                     [39m[1m[2m    6.74 kB[22m[22m[2m │ gzip:   2.13 kB[22m
+[2mdist/[22m[2massets/[22m[36mlogStreaming.store-BS8HsVEY.js                          [39m[1m[2m    6.75 kB[22m[22m[2m │ gzip:   1.74 kB[22m
+[2mdist/[22m[2massets/[22m[36mModal-fD2WYQtr.js                                       [39m[1m[2m    7.07 kB[22m[22m[2m │ gzip:   2.25 kB[22m
+[2mdist/[22m[2massets/[22m[36mWorkflowPreview-Jl-Z35kq.js                             [39m[1m[2m    7.24 kB[22m[22m[2m │ gzip:   2.12 kB[22m
+[2mdist/[22m[2massets/[22m[36mexecutions.store-qbS_4MWP.js                            [39m[1m[2m    7.26 kB[22m[22m[2m │ gzip:   1.87 kB[22m
+[2mdist/[22m[2massets/[22m[36mbanners.store-SlqYlrQ6.js                               [39m[1m[2m    7.26 kB[22m[22m[2m │ gzip:   2.33 kB[22m
+[2mdist/[22m[2massets/[22m[36mPrebuiltAgentTemplatesView-BOGdGmft.js                  [39m[1m[2m    7.27 kB[22m[22m[2m │ gzip:   1.91 kB[22m
+[2mdist/[22m[2massets/[22m[36mCredentialSelectorModal-BYK3egsk.js                     [39m[1m[2m    7.54 kB[22m[22m[2m │ gzip:   2.25 kB[22m
+[2mdist/[22m[2massets/[22m[36mversions.store-BPQLO3fM.js                              [39m[1m[2m    7.57 kB[22m[22m[2m │ gzip:   2.28 kB[22m
+[2mdist/[22m[2massets/[22m[36mTemplatesWorkflowView-BXfCrdBf.js                       [39m[1m[2m    7.72 kB[22m[22m[2m │ gzip:   2.45 kB[22m
+[2mdist/[22m[2massets/[22m[36mRunDataParsedAiContent-BqmwBGG8.js                      [39m[1m[2m    7.81 kB[22m[22m[2m │ gzip:   2.54 kB[22m
+[2mdist/[22m[2massets/[22m[36mTemplatesCollectionView-BFZ2TVw0.js                     [39m[1m[2m    8.06 kB[22m[22m[2m │ gzip:   2.54 kB[22m
+[2mdist/[22m[2massets/[22m[36musePinnedData-BiEre_2R.js                               [39m[1m[2m    8.08 kB[22m[22m[2m │ gzip:   2.38 kB[22m
+[2mdist/[22m[2massets/[22m[36mCredentialPicker-DnvW8s5d.js                            [39m[1m[2m    8.08 kB[22m[22m[2m │ gzip:   2.31 kB[22m
+[2mdist/[22m[2massets/[22m[36mTagsDropdown-Di4kQHzP.js                                [39m[1m[2m    8.10 kB[22m[22m[2m │ gzip:   2.62 kB[22m
+[2mdist/[22m[2massets/[22m[36mdataTable.store-BMBvMIfG.js                             [39m[1m[2m    8.28 kB[22m[22m[2m │ gzip:   2.13 kB[22m
+[2mdist/[22m[2massets/[22m[36mfocusPanel.store-CDzC3vFJ.js                            [39m[1m[2m    8.39 kB[22m[22m[2m │ gzip:   2.81 kB[22m
+[2mdist/[22m[2massets/[22m[36mfolders.store-3uoNIKnH.js                               [39m[1m[2m    8.41 kB[22m[22m[2m │ gzip:   2.29 kB[22m
+[2mdist/[22m[2massets/[22m[36mWorkflowExecutionsInfoAccordion-D-SACRSp.js             [39m[1m[2m    8.67 kB[22m[22m[2m │ gzip:   2.32 kB[22m
+[2mdist/[22m[2massets/[22m[36mModalDrawer-nTJknyMr.js                                 [39m[1m[2m    8.91 kB[22m[22m[2m │ gzip:   2.92 kB[22m
+[2mdist/[22m[2massets/[22m[36mProjectCardBadge-BO4EG1GR.js                            [39m[1m[2m    9.06 kB[22m[22m[2m │ gzip:   2.30 kB[22m
+[2mdist/[22m[2massets/[22m[36mRunDataJson-Be2hc5n6.js                                 [39m[1m[2m    9.18 kB[22m[22m[2m │ gzip:   2.97 kB[22m
+[2mdist/[22m[2massets/[22m[36mradio-D3cK-Ojt.js                                       [39m[1m[2m    9.47 kB[22m[22m[2m │ gzip:   2.54 kB[22m
+[2mdist/[22m[2massets/[22m[36mSettingsView-BmJNUGD7.js                                [39m[1m[2m    9.58 kB[22m[22m[2m │ gzip:   2.66 kB[22m
+[2mdist/[22m[2massets/[22m[36mInsightsTableWorkflows-DnicngMF.js                      [39m[1m[2m    9.89 kB[22m[22m[2m │ gzip:   3.07 kB[22m
+[2mdist/[22m[2massets/[22m[36museActions-CMLSBJVK.js                                  [39m[1m[2m    9.96 kB[22m[22m[2m │ gzip:   2.92 kB[22m
+[2mdist/[22m[2massets/[22m[36mOAuthConsentView-tnJzonL4.js                            [39m[1m[2m   10.13 kB[22m[22m[2m │ gzip:   2.80 kB[22m
+[2mdist/[22m[2massets/[22m[36mpath-browserify-BnEsEkpq.js                             [39m[1m[2m   10.17 kB[22m[22m[2m │ gzip:   2.48 kB[22m
+[2mdist/[22m[2massets/[22m[36mProjectRolesView-DZnqA-d3.js                            [39m[1m[2m   10.30 kB[22m[22m[2m │ gzip:   3.13 kB[22m
+[2mdist/[22m[2massets/[22m[36mInsightsSummary-BaJkUY7H.js                             [39m[1m[2m   10.58 kB[22m[22m[2m │ gzip:   3.10 kB[22m
+[2mdist/[22m[2massets/[22m[36museWorkflowSaving-jxlff97M.js                           [39m[1m[2m   10.68 kB[22m[22m[2m │ gzip:   2.95 kB[22m
+[2mdist/[22m[2massets/[22m[36mevaluation.constants-yGpIQh3t.js                        [39m[1m[2m   11.39 kB[22m[22m[2m │ gzip:   3.72 kB[22m
+[2mdist/[22m[2massets/[22m[36mSettingsExternalSecrets-CKo90JNi.js                     [39m[1m[2m   11.39 kB[22m[22m[2m │ gzip:   3.20 kB[22m
+[2mdist/[22m[2massets/[22m[36mNodeCreation-jSR_C4Om.js                                [39m[1m[2m   11.48 kB[22m[22m[2m │ gzip:   3.62 kB[22m
+[2mdist/[22m[2massets/[22m[36mSetupTemplateFormStep-Dxzj9LoU.js                       [39m[1m[2m   11.54 kB[22m[22m[2m │ gzip:   3.18 kB[22m
+[2mdist/[22m[2massets/[22m[36mProjectSharing-BqGsO9EE.js                              [39m[1m[2m   11.82 kB[22m[22m[2m │ gzip:   3.17 kB[22m
+[2mdist/[22m[2massets/[22m[36mCommunityNodeUpdateInfo-5RD1Y2Ts.js                     [39m[1m[2m   11.87 kB[22m[22m[2m │ gzip:   3.27 kB[22m
+[2mdist/[22m[2massets/[22m[36mpersonalizedTemplatesV3.store-DC-86BPp.js               [39m[1m[2m   11.88 kB[22m[22m[2m │ gzip:   3.11 kB[22m
+[2mdist/[22m[2massets/[22m[36museBugReporting-CAsGxwx6.js                             [39m[1m[2m   11.91 kB[22m[22m[2m │ gzip:   3.68 kB[22m
+[2mdist/[22m[2massets/[22m[36mSetupWorkflowFromTemplateView-DIxlg072.js               [39m[1m[2m   12.27 kB[22m[22m[2m │ gzip:   3.46 kB[22m
+[2mdist/[22m[2massets/[22m[36mMigrationRuleDetail-By5YU-LI.js                         [39m[1m[2m   12.58 kB[22m[22m[2m │ gzip:   3.77 kB[22m
+[2mdist/[22m[2massets/[22m[36mDataTableView-BssKeo-g.js                               [39m[1m[2m   12.60 kB[22m[22m[2m │ gzip:   3.65 kB[22m
+[2mdist/[22m[2massets/[22m[36mTemplateList-DT9btvZF.js                                [39m[1m[2m   12.69 kB[22m[22m[2m │ gzip:   3.09 kB[22m
+[2mdist/[22m[2massets/[22m[36mAgentEditorModal-Bz0KJYek.js                            [39m[1m[2m   13.17 kB[22m[22m[2m │ gzip:   3.34 kB[22m
+[2mdist/[22m[2massets/[22m[36mProviderSettingsModal-DrSpeH8x.js                       [39m[1m[2m   13.69 kB[22m[22m[2m │ gzip:   3.38 kB[22m
+[2mdist/[22m[2massets/[22m[36mdialog-DZZklMKP.js                                      [39m[1m[2m   13.71 kB[22m[22m[2m │ gzip:   4.09 kB[22m
+[2mdist/[22m[2massets/[22m[36mSigninView-DVqHUmqX.js                                  [39m[1m[2m   13.75 kB[22m[22m[2m │ gzip:   4.00 kB[22m
+[2mdist/[22m[2massets/[22m[36mToolsSelectorModal-B5uglwfE.js                          [39m[1m[2m   13.76 kB[22m[22m[2m │ gzip:   3.67 kB[22m
+[2mdist/[22m[2massets/[22m[36mSettingsApiView-LBQqVGiJ.js                             [39m[1m[2m   14.18 kB[22m[22m[2m │ gzip:   3.97 kB[22m
+[2mdist/[22m[2massets/[22m[36mMigrationRules-DgzMf3EG.js                              [39m[1m[2m   14.34 kB[22m[22m[2m │ gzip:   3.17 kB[22m
+[2mdist/[22m[2massets/[22m[36mToolsSelector-C-o491w0.js                               [39m[1m[2m   14.36 kB[22m[22m[2m │ gzip:   4.06 kB[22m
+[2mdist/[22m[2massets/[22m[36mChatAgentsView-BGI-QENU.js                              [39m[1m[2m   14.48 kB[22m[22m[2m │ gzip:   3.76 kB[22m
+[2mdist/[22m[2massets/[22m[36mFixedCollectionParameter-DgvpxIaM.js                    [39m[1m[2m   15.38 kB[22m[22m[2m │ gzip:   4.34 kB[22m
+[2mdist/[22m[2massets/[22m[36museToast-Cns669uM.js                                    [39m[1m[2m   16.29 kB[22m[22m[2m │ gzip:   5.37 kB[22m
+[2mdist/[22m[2massets/[22m[36mSettingsPersonalView-1hwBYEFM.js                        [39m[1m[2m   16.81 kB[22m[22m[2m │ gzip:   4.12 kB[22m
+[2mdist/[22m[2massets/[22m[36mExternalSecretsProviderConnectionSwitch.ee-DZ2pfCxJ.js  [39m[1m[2m   16.88 kB[22m[22m[2m │ gzip:   8.21 kB[22m
+[2mdist/[22m[2massets/[22m[36mSettingsCommunityNodesView-D5MvjH_5.js                  [39m[1m[2m   17.27 kB[22m[22m[2m │ gzip:   4.40 kB[22m
+[2mdist/[22m[2massets/[22m[36mWorkflowActivator-CQfkNqWJ.js                           [39m[1m[2m   17.30 kB[22m[22m[2m │ gzip:   4.58 kB[22m
+[2mdist/[22m[2massets/[22m[36mProjectRoleView-BPp5Vj66.js                             [39m[1m[2m   17.33 kB[22m[22m[2m │ gzip:   4.26 kB[22m
+[2mdist/[22m[2massets/[22m[36mSettingsLogStreamingView-CZ9Tz1Q1.js                    [39m[1m[2m   17.63 kB[22m[22m[2m │ gzip:   4.62 kB[22m
+[2mdist/[22m[2massets/[22m[36mTestRunDetailView-Ag2bEqC0.js                           [39m[1m[2m   18.34 kB[22m[22m[2m │ gzip:   4.62 kB[22m
+[2mdist/[22m[2massets/[22m[36mChatSidebar-C2OhDPwl.js                                 [39m[1m[2m   18.40 kB[22m[22m[2m │ gzip:   5.05 kB[22m
+[2mdist/[22m[2massets/[22m[36mSettingsUsageAndPlan-CPNuiEHt.js                        [39m[1m[2m   18.46 kB[22m[22m[2m │ gzip:   4.56 kB[22m
+[2mdist/[22m[2massets/[22m[36mEvaluationsView-BEMUtIxi.js                             [39m[1m[2m   18.82 kB[22m[22m[2m │ gzip:   5.03 kB[22m
+[2mdist/[22m[2massets/[22m[36maiTemplatesStarterCollection.store-CiINfy1s.js          [39m[1m[2m   19.69 kB[22m[22m[2m │ gzip:   5.07 kB[22m
+[2mdist/[22m[2massets/[22m[36mreadyToRun.store-jDNCypgM.js                            [39m[1m[2m   20.03 kB[22m[22m[2m │ gzip:   4.99 kB[22m
+[2mdist/[22m[2massets/[22m[36mProjectVariables-CjnUw-0W.js                            [39m[1m[2m   20.92 kB[22m[22m[2m │ gzip:   5.68 kB[22m
+[2mdist/[22m[2massets/[22m[36mCredentialsView-DVieMdaM.js                             [39m[1m[2m   21.43 kB[22m[22m[2m │ gzip:   5.99 kB[22m
+[2mdist/[22m[2massets/[22m[36musePushConnection-jkDAhbcF.js                           [39m[1m[2m   21.69 kB[22m[22m[2m │ gzip:   5.22 kB[22m
+[2mdist/[22m[2massets/[22m[36micon-O41KcBC0.js                                        [39m[1m[2m   21.87 kB[22m[22m[2m │ gzip:   5.07 kB[22m
+[2mdist/[22m[2massets/[22m[36museMessage-EVuHl2LR.js                                  [39m[1m[2m   22.49 kB[22m[22m[2m │ gzip:   5.87 kB[22m
+[2mdist/[22m[2massets/[22m[36mInsightsDashboard-BOndDRMx.js                           [39m[1m[2m   22.62 kB[22m[22m[2m │ gzip:   6.04 kB[22m
+[2mdist/[22m[2massets/[22m[36mExecutionsTime-DQSsOfR6.js                              [39m[1m[2m   22.97 kB[22m[22m[2m │ gzip:   4.68 kB[22m
+[2mdist/[22m[2massets/[22m[36mWorkerView-2tVy_9yo.js                                  [39m[1m[2m   23.87 kB[22m[22m[2m │ gzip:   5.74 kB[22m
+[2mdist/[22m[2massets/[22m[36mEvaluationsRootView-CRPpB6dC.js                         [39m[1m[2m   24.07 kB[22m[22m[2m │ gzip:   5.12 kB[22m
+[2mdist/[22m[2massets/[22m[36mProjectHeader-BzuxGb9h.js                               [39m[1m[2m   24.56 kB[22m[22m[2m │ gzip:   5.69 kB[22m
+[2mdist/[22m[2massets/[22m[36mbuttons.esm-B-kjZ1k2.js                                 [39m[1m[2m   24.60 kB[22m[22m[2m │ gzip:   7.53 kB[22m
+[2mdist/[22m[2massets/[22m[36mSettingsSourceControl-CsZIf4Ha.js                       [39m[1m[2m   25.10 kB[22m[22m[2m │ gzip:   4.99 kB[22m
+[2mdist/[22m[2massets/[22m[36mResourcesListLayout-ClY74jht.js                         [39m[1m[2m   26.82 kB[22m[22m[2m │ gzip:   6.64 kB[22m
+[2mdist/[22m[2massets/[22m[36mmerge-C4OHBHTc.js                                       [39m[1m[2m   27.11 kB[22m[22m[2m │ gzip:   5.68 kB[22m
+[2mdist/[22m[2massets/[22m[36mRunDataTable-Bg2o7tbm.js                                [39m[1m[2m   27.41 kB[22m[22m[2m │ gzip:   6.71 kB[22m
+[2mdist/[22m[2massets/[22m[36mWorkflowExecutionsPreview-BI0PAxEt.js                   [39m[1m[2m   28.22 kB[22m[22m[2m │ gzip:   6.12 kB[22m
+[2mdist/[22m[2massets/[22m[36mchat.store-CQLQUj1U.js                                  [39m[1m[2m   28.64 kB[22m[22m[2m │ gzip:   6.20 kB[22m
+[2mdist/[22m[2massets/[22m[36mWorkflowHistory-Dq1Wg5El.js                             [39m[1m[2m   30.03 kB[22m[22m[2m │ gzip:   7.11 kB[22m
+[2mdist/[22m[2massets/[22m[36mSettingsUsersView-C69Oo7n8.js                           [39m[1m[2m   32.47 kB[22m[22m[2m │ gzip:   7.30 kB[22m
+[2mdist/[22m[2massets/[22m[36mWorkflowExecutionsView-BkSaz9iK.js                      [39m[1m[2m   34.18 kB[22m[22m[2m │ gzip:   7.96 kB[22m
+[2mdist/[22m[2massets/[22m[36mExecutionsView-BpFfBMkD.js                              [39m[1m[2m   36.27 kB[22m[22m[2m │ gzip:   7.98 kB[22m
+[2mdist/[22m[2massets/[22m[36museLogsTreeExpand-BL6ypieK.js                           [39m[1m[2m   37.00 kB[22m[22m[2m │ gzip:   9.45 kB[22m
+[2mdist/[22m[2massets/[22m[36museRunWorkflow-CMQQiEg_.js                              [39m[1m[2m   37.07 kB[22m[22m[2m │ gzip:   9.60 kB[22m
+[2mdist/[22m[2massets/[22m[36mxml-BP5i5VLm.js                                         [39m[1m[2m   37.19 kB[22m[22m[2m │ gzip:   7.70 kB[22m
+[2mdist/[22m[2massets/[22m[36mCalendarDate-DxkU3CHY.js                                [39m[1m[2m   37.38 kB[22m[22m[2m │ gzip:   7.79 kB[22m
+[2mdist/[22m[2massets/[22m[36mItemsRenderer-DmSwrfzH.js                               [39m[1m[2m   37.64 kB[22m[22m[2m │ gzip:   8.04 kB[22m
+[2mdist/[22m[2massets/[22m[36mvue-json-pretty-DsYkKELy.js                             [39m[1m[2m   38.13 kB[22m[22m[2m │ gzip:  10.63 kB[22m
+[2mdist/[22m[2massets/[22m[36mcore-B834MECE.js                                        [39m[1m[2m   38.16 kB[22m[22m[2m │ gzip:  10.82 kB[22m
+[2mdist/[22m[2massets/[22m[36mProjectSettings-BUXGBpiL.js                             [39m[1m[2m   39.23 kB[22m[22m[2m │ gzip:   8.34 kB[22m
+[2mdist/[22m[2massets/[22m[36mNodeDetailsViewV2-BckUBhhD.js                           [39m[1m[2m   39.45 kB[22m[22m[2m │ gzip:   9.93 kB[22m
+[2mdist/[22m[2massets/[22m[36mtemplates.store-BV8Iw3VY.js                             [39m[1m[2m   39.88 kB[22m[22m[2m │ gzip:  13.19 kB[22m
+[2mdist/[22m[2massets/[22m[36mreadyToRunWorkflows.store-CIQOO6tC.js                   [39m[1m[2m   40.30 kB[22m[22m[2m │ gzip:  10.27 kB[22m
+[2mdist/[22m[2massets/[22m[36massistant.store-DN7zngfZ.js                             [39m[1m[2m   41.75 kB[22m[22m[2m │ gzip:   9.48 kB[22m
+[2mdist/[22m[2massets/[22m[36mSettingsMCPView-pZAO-kBo.js                             [39m[1m[2m   42.16 kB[22m[22m[2m │ gzip:   8.14 kB[22m
+[2mdist/[22m[2massets/[22m[36mTemplatesSearchView-B_Jc8Ywt.js                         [39m[1m[2m   44.46 kB[22m[22m[2m │ gzip:  10.56 kB[22m
+[2mdist/[22m[2massets/[22m[36mNodeDetailsView-BB5W2cjB.js                             [39m[1m[2m   44.50 kB[22m[22m[2m │ gzip:  10.52 kB[22m
+[2mdist/[22m[2massets/[22m[36mMainSidebar-CSafrI6Z.js                                 [39m[1m[2m   45.24 kB[22m[22m[2m │ gzip:   9.85 kB[22m
+[2mdist/[22m[2massets/[22m[36mSettingsSso-DfPMRWsG.js                                 [39m[1m[2m   49.64 kB[22m[22m[2m │ gzip:   9.41 kB[22m
+[2mdist/[22m[2massets/[22m[36msemver-CnpQUrVt.js                                      [39m[1m[2m   51.00 kB[22m[22m[2m │ gzip:  11.19 kB[22m
+[2mdist/[22m[2massets/[22m[36mChatView-DgDzD843.js                                    [39m[1m[2m   53.49 kB[22m[22m[2m │ gzip:  12.08 kB[22m
+[2mdist/[22m[2massets/[22m[36mTriggerPanel-CruGwvMV.js                                [39m[1m[2m   57.21 kB[22m[22m[2m │ gzip:  12.37 kB[22m
+[2mdist/[22m[2massets/[22m[36mexports-0lA49Fnw.js                                     [39m[1m[2m   61.43 kB[22m[22m[2m │ gzip:  15.92 kB[22m
+[2mdist/[22m[2massets/[22m[36mAddDataTableModal-BG5VnNYs.js                           [39m[1m[2m   61.79 kB[22m[22m[2m │ gzip:  14.61 kB[22m
+[2mdist/[22m[2massets/[22m[36mNodeCreator-BOiII5c0.js                                 [39m[1m[2m   63.45 kB[22m[22m[2m │ gzip:  14.24 kB[22m
+[2mdist/[22m[2massets/[22m[36museCommandBar-Dm-Bt66x.js                               [39m[1m[2m   66.08 kB[22m[22m[2m │ gzip:  12.27 kB[22m
+[2mdist/[22m[2massets/[22m[36mSettingsLdapView-CSlwbLac.js                            [39m[1m[2m   71.28 kB[22m[22m[2m │ gzip:  14.49 kB[22m
+[2mdist/[22m[2massets/[22m[36museCanvasOperations-rfdiDvHa.js                         [39m[1m[2m   71.32 kB[22m[22m[2m │ gzip:  16.03 kB[22m
+[2mdist/[22m[2massets/[22m[36mMainHeader-DymQE-W9.js                                  [39m[1m[2m   74.40 kB[22m[22m[2m │ gzip:  17.49 kB[22m
+[2mdist/[22m[2massets/[22m[36mNodeSettings-CwLiK4pX.js                                [39m[1m[2m   82.01 kB[22m[22m[2m │ gzip:  17.81 kB[22m
+[2mdist/[22m[2massets/[22m[36mVirtualSchema-znkJP32n.js                               [39m[1m[2m   85.03 kB[22m[22m[2m │ gzip:  22.44 kB[22m
+[2mdist/[22m[2massets/[22m[36mempty-C2SrrehM.js                                       [39m[1m[2m   89.28 kB[22m[22m[2m │ gzip:  18.85 kB[22m
+[2mdist/[22m[2massets/[22m[36mLogsPanel-CXuBp0Uv.js                                   [39m[1m[2m   96.03 kB[22m[22m[2m │ gzip:  21.89 kB[22m
+[2mdist/[22m[2massets/[22m[36m_baseOrderBy-C5mmFCpZ.js                                [39m[1m[2m  104.43 kB[22m[22m[2m │ gzip:  29.64 kB[22m
+[2mdist/[22m[2massets/[22m[36mNodeView-DCkondc_.js                                    [39m[1m[2m  104.61 kB[22m[22m[2m │ gzip:  23.95 kB[22m
+[2mdist/[22m[2massets/[22m[36mnodeCreator.store-C9UePIOS.js                           [39m[1m[2m  124.08 kB[22m[22m[2m │ gzip:  24.00 kB[22m
+[2mdist/[22m[2massets/[22m[36mtable-D7Gln7vm.js                                       [39m[1m[2m  134.53 kB[22m[22m[2m │ gzip:  32.92 kB[22m
+[2mdist/[22m[2massets/[22m[36mWorkflowsView-D1pd3zlb.js                               [39m[1m[2m  135.13 kB[22m[22m[2m │ gzip:  25.27 kB[22m
+[2mdist/[22m[2massets/[22m[36mtruncate-BHLN9TXk.js                                    [39m[1m[2m  139.31 kB[22m[22m[2m │ gzip:  35.24 kB[22m
+[2mdist/[22m[2massets/[22m[36mrouter-CztxZH7h.js                                      [39m[1m[2m  144.74 kB[22m[22m[2m │ gzip:  33.13 kB[22m
+[2mdist/[22m[2massets/[22m[36mvue-CLRzcfGh.js                                         [39m[1m[2m  154.13 kB[22m[22m[2m │ gzip:  38.44 kB[22m
+[2mdist/[22m[2massets/[22m[36mdate-picker-CUEuvXpr.js                                 [39m[1m[2m  157.50 kB[22m[22m[2m │ gzip:  32.35 kB[22m
+[2mdist/[22m[2massets/[22m[36mRunDataJsonActions-DVCm3Nli.js                          [39m[1m[2m  178.93 kB[22m[22m[2m │ gzip:  38.21 kB[22m
+[2mdist/[22m[2massets/[22m[36mvue.runtime.esm-bundler-tP5dCd7J.js                     [39m[1m[2m  274.46 kB[22m[22m[2m │ gzip:  69.13 kB[22m
+[2mdist/[22m[2massets/[22m[36mlanguageModules-GJLbrGx7.js                             [39m[1m[2m  297.51 kB[22m[22m[2m │ gzip:  83.30 kB[22m
+[2mdist/[22m[2massets/[22m[36museImportCurlCommand-CkuSt0Yo.js                        [39m[1m[2m  313.82 kB[22m[22m[2m │ gzip:  63.49 kB[22m
+[2mdist/[22m[2massets/[22m[36mchart-DnsWbmwc.js                                       [39m[1m[2m  348.73 kB[22m[22m[2m │ gzip:  86.01 kB[22m
+[2mdist/[22m[2massets/[22m[36msanitize-html-BxAbtdhp.js                               [39m[1m[2m  365.28 kB[22m[22m[2m │ gzip:  94.75 kB[22m
+[2mdist/[22m[2massets/[22m[36museCanvasMapping-B4olhXb-.js                            [39m[1m[2m  444.71 kB[22m[22m[2m │ gzip: 100.91 kB[22m
+[2mdist/[22m[2massets/[22m[36m_MapCache-C4skqwCv.js                                   [39m[1m[33m  517.77 kB[39m[22m[2m │ gzip: 117.16 kB[22m
+[2mdist/[22m[2massets/[22m[36mNDVEmptyState-BHe71xC2.js                               [39m[1m[33m  727.35 kB[39m[22m[2m │ gzip: 183.66 kB[22m
+[2mdist/[22m[2massets/[22m[36museTelemetry-BPAHhFb3.js                                [39m[1m[33m  910.61 kB[39m[22m[2m │ gzip: 212.51 kB[22m
+[2mdist/[22m[2massets/[22m[36mindex-DE8EH-Md.js                                       [39m[1m[33m1,019.52 kB[39m[22m[2m │ gzip: 215.92 kB[22m
+[2mdist/[22m[2massets/[22m[36mes-C8YSpQK8.js                                          [39m[1m[33m1,190.50 kB[39m[22m[2m │ gzip: 324.96 kB[22m
+[2mdist/[22m[2massets/[22m[36misEmpty-BBa_0i5g.js                                     [39m[1m[33m1,338.85 kB[39m[22m[2m │ gzip: 333.63 kB[22m
+[2mdist/[22m[2massets/[22m[36mParameterInputList-BR-eJNbZ.js                          [39m[1m[33m1,402.35 kB[39m[22m[2m │ gzip: 347.58 kB[22m
+[2mdist/[22m[2massets/[22m[36mDataTableDetailsView-JVB7TUYJ.js                        [39m[1m[33m1,586.66 kB[39m[22m[2m │ gzip: 354.61 kB[22m
+[2mdist/[22m[2massets/[22m[36msrc-D8GeGx7w.js                                         [39m[1m[33m1,776.71 kB[39m[22m[2m │ gzip: 385.61 kB[22m
+[2mdist/[22m[2massets/[22m[36mconstants-BfyxlFrN.js                                   [39m[1m[33m2,839.42 kB[39m[22m[2m │ gzip: 548.34 kB[22m
+[33m[EVAL] Warning:[0m Use of `eval` function is strongly discouraged as it poses security risks and may cause issues with minification.
+      [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m ../../../node_modules/.pnpm/web-tree-sitter@0.24.3/node_modules/web-tree-sitter/tree-sitter.js:1195:37 [38;5;246m][0m
+      [38;5;246m│[0m
+ [38;5;246m1195 │[0m [38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249mA[0m[38;5;249mS[0m[38;5;249mM[0m[38;5;249m_[0m[38;5;249mC[0m[38;5;249mO[0m[38;5;249mN[0m[38;5;249mS[0m[38;5;249mT[0m[38;5;249mS[0m[38;5;249m[[0m[38;5;249ms[0m[38;5;249mt[0m[38;5;249ma[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249m][0m[38;5;249m [0m[38;5;249m=[0m[38;5;249m [0meval[38;5;249m([0m[38;5;249mf[0m[38;5;249mu[0m[38;5;249mn[0m[38;5;249mc[0m[38;5;249m)[0m[38;5;249m;[0m
+ [38;5;240m     │[0m                                     ──┬─  
+ [38;5;240m     │[0m                                       ╰─── Use of `eval` function here.
+[38;5;246m──────╯[0m
+
+[33m[EVAL] Warning:[0m Use of `eval` function is strongly discouraged as it poses security risks and may cause issues with minification.
+      [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m ../../../node_modules/.pnpm/web-tree-sitter@0.24.3/node_modules/web-tree-sitter/tree-sitter.js:1221:39 [38;5;246m][0m
+      [38;5;246m│[0m
+ [38;5;246m1221 │[0m [38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249mm[0m[38;5;249mo[0m[38;5;249md[0m[38;5;249mu[0m[38;5;249ml[0m[38;5;249me[0m[38;5;249mE[0m[38;5;249mx[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249ms[0m[38;5;249m[[0m[38;5;249mn[0m[38;5;249ma[0m[38;5;249mm[0m[38;5;249me[0m[38;5;249m][0m[38;5;249m [0m[38;5;249m=[0m[38;5;249m [0meval[38;5;249m([0m[38;5;249mf[0m[38;5;249mu[0m[38;5;249mn[0m[38;5;249mc[0m[38;5;249m)[0m[38;5;249m;[0m
+ [38;5;240m     │[0m                                       ──┬─  
+ [38;5;240m     │[0m                                         ╰─── Use of `eval` function here.
+[38;5;246m──────╯[0m
+
+✓ built in 4m 25s

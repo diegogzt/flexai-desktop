@@ -1,0 +1,5 @@
+
+
+> n8n-node-dev@1.120.0 build /root/project-flexai/flexai/packages/node-dev
+> tsc --noEmit
+

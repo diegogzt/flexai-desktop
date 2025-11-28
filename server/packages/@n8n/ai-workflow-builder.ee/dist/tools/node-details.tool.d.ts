@@ -1,0 +1,30 @@
+import type { INodeTypeDescription } from 'n8n-workflow';
+import { z } from 'zod';
+import type { BuilderToolBase } from '../utils/stream-processor';
+export declare const NODE_DETAILS_TOOL: BuilderToolBase;
+export declare function createNodeDetailsTool(nodeTypes: INodeTypeDescription[]): {
+    toolName: string;
+    displayTitle: string;
+    getCustomDisplayTitle?: (values: Record<string, unknown>) => string;
+    tool: import("@langchain/core/tools").DynamicStructuredTool<z.ZodObject<{
+        nodeName: z.ZodString;
+        nodeVersion: z.ZodNumber;
+        withParameters: z.ZodDefault<z.ZodOptional<z.ZodBoolean>>;
+        withConnections: z.ZodDefault<z.ZodOptional<z.ZodBoolean>>;
+    }, "strip", z.ZodTypeAny, {
+        nodeVersion: number;
+        nodeName: string;
+        withParameters: boolean;
+        withConnections: boolean;
+    }, {
+        nodeVersion: number;
+        nodeName: string;
+        withParameters?: boolean | undefined;
+        withConnections?: boolean | undefined;
+    }>, unknown, {
+        nodeVersion: number;
+        nodeName: string;
+        withParameters?: boolean | undefined;
+        withConnections?: boolean | undefined;
+    }, import("@langchain/langgraph").Command<unknown>>;
+};

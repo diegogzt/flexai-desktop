@@ -1,0 +1,5 @@
+
+
+> @n8n/backend-common@0.32.0 build /root/project-flexai/flexai/packages/@n8n/backend-common
+> tsc -p tsconfig.build.json
+

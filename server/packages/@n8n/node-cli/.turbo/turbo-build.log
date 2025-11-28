@@ -1,0 +1,9 @@
+
+
+> @n8n/node-cli@0.17.0 build /root/project-flexai/flexai/packages/@n8n/node-cli
+> tsc -p tsconfig.build.json && pnpm copy-templates
+
+
+> @n8n/node-cli@0.17.0 copy-templates /root/project-flexai/flexai/packages/@n8n/node-cli
+> node scripts/copy-templates.mjs
+

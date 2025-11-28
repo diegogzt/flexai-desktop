@@ -1,0 +1,5 @@
+
+
+> @n8n/n8n-benchmark@1.30.0 build /root/project-flexai/flexai/packages/@n8n/benchmark
+> tsc -p tsconfig.build.json && tsc-alias -p tsconfig.build.json
+
