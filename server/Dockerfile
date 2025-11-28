@@ -24,7 +24,7 @@ COPY scripts/ ./scripts/
 COPY patches/ ./patches/
 
 # Install dependencies
-RUN pnpm install --frozen-lockfile
+RUN pnpm install --no-frozen-lockfile
 
 # Build the application
 # This runs the full monorepo build
