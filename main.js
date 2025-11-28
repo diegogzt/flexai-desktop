@@ -46,8 +46,8 @@ async function startN8n() {
     if (isDev) {
       n8nPath = path.resolve(__dirname, '../packages/cli/bin/n8n');
     } else {
-      // TODO: In production, we expect the 'packages' folder to be copied into resources
-      n8nPath = path.join(process.resourcesPath, 'packages/cli/bin/n8n');
+      // In production, we use the bundled backend in resources/flexai-backend
+      n8nPath = path.join(process.resourcesPath, 'flexai-backend/packages/cli/bin/n8n');
     }
 
     if (!fs.existsSync(n8nPath)) {

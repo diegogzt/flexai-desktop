@@ -5,6 +5,7 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
+    "predist": "node scripts/copy-backend.js",
     "build": "electron-builder",
     "pack": "electron-builder --dir",
     "dist": "electron-builder"
@@ -34,6 +35,12 @@
     "linux": {
       "target": "AppImage",
       "category": "Development"
-    }
+    },
+    "extraResources": [
+      {
+        "from": "resources/flexai-backend",
+        "to": "flexai-backend"
+      }
+    ]
   }
 }
