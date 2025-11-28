@@ -230,7 +230,7 @@ function checkCredentialUsageInFile(
 					}
 
 					const credentialsArray = findArrayLiteralProperty(
-						descriptionProperty.value,
+						descriptionProperty.value as TSESTree.ObjectExpression,
 						'credentials',
 					);
 					if (!credentialsArray) {
