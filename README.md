@@ -1,38 +1,38 @@
-# FlexAI Desktop Manager
+# FlexAI Desktop
 
-This is an Electron-based desktop application that manages the FlexAI Docker container. It provides a simple GUI to install, start, stop, and update FlexAI.
-
-## Prerequisites
-
-- **Docker Desktop** (or Docker Engine) must be installed and running on the host machine.
-- **Node.js** and **npm/pnpm** for building the application.
-
-## Development
-
-1. Install dependencies:
-   ```bash
-   npm install
-   # or
-   pnpm install
-   ```
-
-2. Start the application in development mode:
-   ```bash
-   npm start
-   ```
-
-## Building for Distribution
-
-To build the installer for your current platform (Windows, macOS, or Linux):
-
-```bash
-npm run dist
-```
-
-The output files (installers) will be in the `dist` directory.
+This is a standalone desktop launcher for FlexAI. It allows you to run the full FlexAI platform locally without needing Docker or manual configuration.
 
 ## How it works
 
-- The app uses `dockerode` to communicate with the local Docker daemon.
-- It manages a container named `flexai` using the image `diegogzt/flexai:latest`.
-- It maps port `5678` and mounts a volume `flexai_data` for persistence.
+1.  It finds the FlexAI executable (bundled or in the monorepo).
+2.  It automatically configures the environment (Database, Port, Encryption Keys).
+3.  It launches the FlexAI server in the background.
+4.  It opens the FlexAI interface in the application window.
+
+## Development
+
+To run this launcher against your local FlexAI source code:
+
+1.  Ensure you have built the main project:
+    ```bash
+    cd ../
+    pnpm build
+    ```
+2.  Install dependencies here:
+    ```bash
+    npm install
+    ```
+3.  Start the desktop app:
+    ```bash
+    npm start
+    ```
+
+## Building for Distribution
+
+To create a standalone installer that includes the FlexAI code:
+
+1.  You must configure the build process to copy the `packages/cli` and `packages/editor-ui` build artifacts into the Electron resources.
+2.  Run:
+    ```bash
+    npm run dist
+    ```

@@ -1,39 +1,131 @@
 const { app, BrowserWindow, ipcMain, shell } = require('electron');
 const path = require('path');
-const Docker = require('dockerode');
-const { exec } = require('child_process');
+const { spawn } = require('child_process');
 const fixPath = require('fix-path');
+const portfinder = require('portfinder');
+const waitOn = require('wait-on');
+const fs = require('fs');
 
 // Fix path for GUI apps on macOS
 fixPath();
 
 let mainWindow;
-let docker;
-
-// Initialize Docker connection
-// On Windows: //./pipe/docker_engine
-// On Linux/Mac: /var/run/docker.sock
-try {
-  docker = new Docker();
-} catch (e) {
-  console.error('Failed to initialize Dockerode', e);
-}
+let n8nProcess;
+let serverUrl;
 
 function createWindow() {
   mainWindow = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: 1200,
+    height: 800,
     webPreferences: {
       nodeIntegration: true,
-      contextIsolation: false, // For simple prototype, usually use preload script
+      contextIsolation: false,
     },
+    show: false // Don't show until ready or loading
   });
 
   mainWindow.loadFile('index.html');
+  mainWindow.once('ready-to-show', () => {
+    mainWindow.show();
+  });
+}
+
+async function startN8n() {
+  try {
+    // 1. Find a free port
+    const port = await portfinder.getPortPromise({ port: 5678 });
+    serverUrl = `http://localhost:${port}`;
+    
+    // 2. Determine n8n executable path
+    // In dev (monorepo): ../packages/cli/bin/n8n
+    // In prod: resources/app/packages/cli/bin/n8n (we need to bundle it)
+    
+    let n8nPath;
+    const isDev = !app.isPackaged;
+    
+    if (isDev) {
+      n8nPath = path.resolve(__dirname, '../packages/cli/bin/n8n');
+    } else {
+      // TODO: In production, we expect the 'packages' folder to be copied into resources
+      n8nPath = path.join(process.resourcesPath, 'packages/cli/bin/n8n');
+    }
+
+    if (!fs.existsSync(n8nPath)) {
+      throw new Error(`Could not find n8n executable at: ${n8nPath}`);
+    }
+
+    // 3. Set up Environment Variables
+    const userDataPath = path.join(app.getPath('userData'), 'flexai-data');
+    if (!fs.existsSync(userDataPath)) {
+      fs.mkdirSync(userDataPath, { recursive: true });
+    }
+
+    const env = {
+      ...process.env,
+      N8N_PORT: port,
+      N8N_USER_FOLDER: userDataPath,
+      // Force SQLite
+      DB_TYPE: 'sqlite',
+      // Disable some checks
+      N8N_SKIP_STABILITY_CHECK: 'true',
+      // Ensure we don't need .env file
+      N8N_ENCRYPTION_KEY: process.env.N8N_ENCRYPTION_KEY || 'flexai-desktop-insecure-key-change-me', 
+      // Add other defaults here
+    };
+
+    mainWindow.webContents.send('log', `Starting FlexAI on port ${port}...`);
+    mainWindow.webContents.send('log', `Data directory: ${userDataPath}`);
+
+    // 4. Spawn the process
+    n8nProcess = spawn(process.execPath, [n8nPath, 'start'], {
+      env,
+      cwd: path.dirname(n8nPath) // Run from the bin dir or package dir
+    });
+
+    n8nProcess.stdout.on('data', (data) => {
+      const str = data.toString();
+      console.log('[n8n]', str);
+      mainWindow.webContents.send('log', str);
+      
+      // Check for "Editor is now accessible via"
+      if (str.includes('Editor is now accessible via')) {
+        loadApp();
+      }
+    });
+
+    n8nProcess.stderr.on('data', (data) => {
+      console.error('[n8n err]', data.toString());
+      mainWindow.webContents.send('log', `Error: ${data.toString()}`);
+    });
+
+    n8nProcess.on('close', (code) => {
+      console.log(`n8n process exited with code ${code}`);
+      mainWindow.webContents.send('log', `FlexAI stopped (code ${code})`);
+    });
+
+    // 5. Wait for port to be reachable (fallback if stdout parsing fails)
+    try {
+      await waitOn({ resources: [serverUrl], timeout: 60000 });
+      loadApp();
+    } catch (err) {
+      console.error('Timed out waiting for n8n', err);
+    }
+
+  } catch (error) {
+    console.error('Failed to start n8n:', error);
+    mainWindow.webContents.send('log', `Fatal Error: ${error.message}`);
+  }
+}
+
+function loadApp() {
+  if (mainWindow) {
+    mainWindow.loadURL(serverUrl);
+  }
 }
 
 app.whenReady().then(() => {
   createWindow();
+  startN8n();
 
   app.on('activate', function () {
     if (BrowserWindow.getAllWindows().length === 0) createWindow();
@@ -41,122 +133,14 @@ app.whenReady().then(() => {
 });
 
 app.on('window-all-closed', function () {
+  if (n8nProcess) {
+    n8nProcess.kill();
+  }
   if (process.platform !== 'darwin') app.quit();
 });
 
-// IPC Handlers
-
-ipcMain.handle('check-docker', async () => {
-  return new Promise((resolve) => {
-    exec('docker --version', (error, stdout, stderr) => {
-      if (error) {
-        resolve({ installed: false, running: false, message: 'Docker is not installed or not in PATH.' });
-      } else {
-        // Check if daemon is running by trying to list containers
-        docker.listContainers((err, containers) => {
-          if (err) {
-            resolve({ installed: true, running: false, message: 'Docker is installed but not running.' });
-          } else {
-            resolve({ installed: true, running: true, message: 'Docker is ready.' });
-          }
-        });
-      }
-    });
-  });
-});
-
-ipcMain.handle('check-flexai-status', async () => {
-  try {
-    const containers = await docker.listContainers({ all: true });
-    const container = containers.find(c => c.Names.includes('/flexai'));
-    if (!container) return { status: 'not-installed' };
-    return { status: container.State }; // 'running', 'exited', etc.
-  } catch (error) {
-    return { status: 'error', error: error.message };
+app.on('before-quit', () => {
+  if (n8nProcess) {
+    n8nProcess.kill();
   }
-});
-
-ipcMain.handle('install-flexai', async (event) => {
-  try {
-    mainWindow.webContents.send('log', 'Pulling FlexAI image...');
-    await new Promise((resolve, reject) => {
-      docker.pull('diegogzt/flexai:latest', (err, stream) => { // Assuming image name
-        if (err) return reject(err);
-        docker.modem.followProgress(stream, onFinished, onProgress);
-
-        function onFinished(err, output) {
-          if (err) return reject(err);
-          resolve(output);
-        }
-
-        function onProgress(event) {
-          if (event.status) {
-            mainWindow.webContents.send('log', event.status);
-          }
-        }
-      });
-    });
-    
-    mainWindow.webContents.send('log', 'Creating container...');
-    // Create container
-    // Equivalent to: docker run -d --name flexai -p 5678:5678 -v flexai_data:/home/node/.n8n diegogzt/flexai:latest
-    const container = await docker.createContainer({
-      Image: 'diegogzt/flexai:latest',
-      name: 'flexai',
-      ExposedPorts: { '5678/tcp': {} },
-      HostConfig: {
-        PortBindings: { '5678/tcp': [{ HostPort: '5678' }] },
-        Binds: ['flexai_data:/home/node/.n8n'],
-        RestartPolicy: { Name: 'unless-stopped' }
-      }
-    });
-    
-    return { success: true };
-  } catch (error) {
-    return { success: false, error: error.message };
-  }
-});
-
-ipcMain.handle('start-flexai', async () => {
-  try {
-    const container = docker.getContainer('flexai');
-    await container.start();
-    return { success: true };
-  } catch (error) {
-    return { success: false, error: error.message };
-  }
-});
-
-ipcMain.handle('stop-flexai', async () => {
-  try {
-    const container = docker.getContainer('flexai');
-    await container.stop();
-    return { success: true };
-  } catch (error) {
-    return { success: false, error: error.message };
-  }
-});
-
-ipcMain.handle('update-flexai', async () => {
-  try {
-    // 1. Pull new image
-    // 2. Stop and remove old container
-    // 3. Create new container
-    // (Simplified for this example, re-using install logic would be better)
-    const container = docker.getContainer('flexai');
-    try {
-      await container.stop();
-      await container.remove();
-    } catch (e) { /* ignore if not running/exists */ }
-    
-    // Trigger install again
-    // In a real app, we'd refactor the install logic to be reusable here
-    return { success: true, message: 'Please click Install to re-create with latest image' };
-  } catch (error) {
-    return { success: false, error: error.message };
-  }
-});
-
-ipcMain.handle('open-browser', () => {
-  shell.openExternal('http://localhost:5678');
 });
