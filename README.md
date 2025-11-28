@@ -13,7 +13,14 @@ This repository contains the complete FlexAI platform wrapped in a desktop launc
     ```bash
     npm install
     ```
-    *Note: This may take a while as it builds the entire platform.*
+    *Note: This process uses `pnpm` internally to build the server. It may take a while.*
+
+    If you need to work manually inside the `server/` directory, you **must** use `pnpm` instead of `npm`:
+    ```bash
+    npm install -g pnpm
+    cd server
+    pnpm install
+    ```
 
 2.  Start the desktop app:
     ```bash
