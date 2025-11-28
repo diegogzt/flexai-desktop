@@ -54,7 +54,8 @@
     "vue-router": "catalog:frontend",
     "vue-tsc": "catalog:frontend",
     "zod-to-json-schema": "catalog:",
-    "tsx": "catalog:"
+    "tsx": "catalog:",
+    "prettier": "^3.0.0"
   },
   "license": "https://docs.n8n.io/sustainable-use-license/",
   "dependencies": {
