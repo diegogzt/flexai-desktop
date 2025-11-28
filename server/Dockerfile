@@ -24,6 +24,7 @@ COPY scripts/ ./scripts/
 COPY patches/ ./patches/
 
 # Install dependencies
+ENV CI=true
 RUN pnpm install --no-frozen-lockfile
 
 # Build the application
