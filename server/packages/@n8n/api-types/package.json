@@ -30,6 +30,7 @@
     "xss": "catalog:",
     "zod": "catalog:",
     "zod-class": "0.0.16",
-    "@n8n/permissions": "workspace:*"
+    "@n8n/permissions": "workspace:*",
+    "@n8n_io/ai-assistant-sdk": "catalog:"
   }
 }

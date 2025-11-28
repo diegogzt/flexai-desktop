@@ -27,6 +27,7 @@
     "@n8n/decorators": "workspace:^",
     "@n8n/di": "workspace:^",
     "callsites": "catalog:",
+    "logform": "^2.6.0",
     "n8n-workflow": "workspace:^",
     "picocolors": "catalog:",
     "reflect-metadata": "catalog:",
